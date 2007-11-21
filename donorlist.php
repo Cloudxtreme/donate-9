@@ -18,9 +18,11 @@
 	$pageKeywords	= "friends of eclipse, donation, contribution";
 	$pageAuthor		= "Nathan Gervais";
 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/smartconnection.class.php");
-	$dbc = new DBConnection;
-	$dbc->connect();
+	require_once("classes/friendsContributionsList.class.php");
 	ob_start();	
+	$start = $App->getHTTPParameter("start");
+	if ($start == "")
+		$start = 0;
 	?>
 	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 	<div id="midcolumn">
@@ -33,28 +35,35 @@
 				<td width="20%" align="right">Amount</td>
 			</tr>
 			<?
-				$sql = "SELECT FC.amount, FC.message, F.first_name, F.last_name, F.is_anonymous, F.is_benefit, F.date_joined 
-						FROM friends_contributions as FC 
-						LEFT JOIN friends as F on FC.friend_id = F.friend_id
-						ORDER BY F.date_joined DESC LIMIT 0, 25";
-				$donorRes = mysql_query($sql) or die ("DonorList Failed: " . mysql_error());
-				while ($rr = mysql_fetch_array($donorRes))
+				$friendsContributionsList = new FriendsContributionsList();
+				$friendsContributionsList->selectFriendsContributionsList($start, 25);
+				
+				$friend = new Friend();
+				$contribution = new Contribution();
+				$fcObject = new FriendsContributions();
+				$count = $friendsContributionsList->getCount();
+				for ($i=0; $i < $count; $i++)
 				{
-					$name = $rr['first_name'] . " " . $rr['last_name'];
-					if ($rr['is_anonymous'] == 1)
+					$fcObject = $friendsContributionsList->getItemAt($i);
+					$friend = $fcObject->getFriendObject();
+					$contribution = $fcObject->getContributionObject();
+					$anonymous = $friend->getIsAnonymous();
+					if ($anonymous != 1)
+						$name = $friend->getFirstName() . " " . $friend->getLastName();
+					else 
 						$name = "Anonymous";
-					$benefit = $rr['is_benefit'];
+					$benefit = $friend->getIsBenefit();
 					if ($benefit != 0)
 						$benefit = " <img src=\"images/star.jpg\">";
 					else
 						$benefit = "";
-					$date = $rr['date_joined'];
-					$amount = $rr['amount'];
+					$amount = $contribution->getAmount();	
 					if (strpos($amount, ".") == 0)
 					{
 						$amount = $amount . ".00";
 					}
-					$comment = $rr['message'];
+					$comment = $contribution->getMessage();	
+					$date = $friend->getDateJoined();			
 				?>
 				<tr class="donorRecord">
 					<td><?=$benefit;?></td>
