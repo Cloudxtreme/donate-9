@@ -168,6 +168,7 @@
 				<p>View our <a href="donorlist.php">Donor List</a></p>
 				<p>Your transaction has been completed, and a receipt for your purchase has been emailed to you.<br> You may log into your account at <a href='https://www.paypal.com'>www.paypal.com</a> to view details of this transaction.<br>
 				<? if ($benefit == 1) { ?>
+				<p>For the Friends of Eclipse Login Page please visit: <a href="http://dev.eclipse.org/site_login">http://dev.eclipse.org/site_login</a>.  Provide your Bugzilla Login Credentials to proceed</p>
 				<p>If you wish to link to the Friends of Eclipse Logo on your website or blog please use this code below</p>
 				<textarea rows="2" cols="60"><img src="http://www.eclipse.org/donate/images/friendslogo.jpg"></textarea>
 				<? } ?>
