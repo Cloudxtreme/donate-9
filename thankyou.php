@@ -19,8 +19,8 @@
 	$pageAuthor		= "Nathan Gervais";
 
 
-	 require_once($_SERVER['DOCUMENT_ROOT'] . "/friends/classes/friend.class.php");
-	 require_once($_SERVER['DOCUMENT_ROOT'] . "/friends/classes/contribution.class.php");
+	 require_once($_SERVER['DOCUMENT_ROOT'] . "/donate/classes/friend.class.php");
+	 require_once($_SERVER['DOCUMENT_ROOT'] . "/donate/classes/contribution.class.php");
 	
 	ob_start();	
 	// read the post from PayPal system and add 'cmd'
@@ -167,6 +167,8 @@
 				</ul>
 				<p>View our <a href="donorlist.php">Donor List</a></p>
 				<p>Your transaction has been completed, and a receipt for your purchase has been emailed to you.<br> You may log into your account at <a href='https://www.paypal.com'>www.paypal.com</a> to view details of this transaction.<br>
+				<p>If you wish to link to the Friends of Eclipse Logo on your website or blog please use this code below</p>
+				<textarea rows="2" cols="60"><img src="http://www.eclipse.org/donate/images/friendslogo.jpg"></textarea>
 			</div>
 			
 			<?
