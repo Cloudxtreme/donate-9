@@ -176,7 +176,7 @@
 			<?
 		}
 		else if (strcmp ($lines[0], "FAIL") == 0) {
-			?><p>There was an error in processing your transaction. Please contact <a href="mailto:friends@eclipse.org">friends@eclipse.org</a> with the transaction information from PayPal.</p>
+			?><p>There was an error in processing your transaction. Please contact <a href="mailto:friends@eclipse.org">friends@eclipse.org</a> with the transaction information from PayPal.</p><?
 		}
 	}
 	
