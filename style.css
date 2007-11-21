@@ -1,0 +1,55 @@
+.footNote {
+	font-size:smaller;
+}
+
+.donorList {
+	width:100%;
+	padding:0px;
+	margin:0px;
+	border:1px solid #888;
+}
+
+.donorList .donorHeader td {
+	background-image:url(/images/bar.jpg);
+	font-weight:bold;
+	height:25px;
+	border-bottom:1px solid #888;
+	padding: 0 3px 0 3px;
+}
+
+.donorList .donorRecord td {
+	border-bottom:1px solid #ccc;
+	padding: 3px;
+}
+
+.paddedList {
+	padding-left:20px;
+}
+
+.friend {
+	font-weight:bold;
+}
+
+.required {
+	color:red;
+	text-align:right;
+}
+
+#WhatsThis {
+	font-size:80%;	
+}
+
+.invisible{
+	display:none;
+}
+
+.visible{
+	display:inline;
+}
+
+.more {
+	font-size:75%;
+	text-align:right;
+	vertical-align:bottom;
+	padding-top:5px;
+}
