@@ -87,7 +87,7 @@
 						<tr>
 							<td colspan=2>
 								<div id="WhatsThis" class="invisible">
-									When you donate $35 or more you will have access to the Friends of Eclipse Mirror Site.  Providing your Bugzilla Login will give you access to this mirror. 
+									When you donate $35 or more you will have access to the Friends of Eclipse Mirror Site. Your Bugzilla Login is used to give you access to this mirror. 
 								</div>
 							</td>
 						</tr>
