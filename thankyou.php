@@ -160,21 +160,23 @@
 				<b>Donation Details</b><br>
 				<ul>
 					<li>Name: <?=$firstname;?> <?=$lastname;?></li>
-					<li>Bugzilla ID: <?=$bugzillaEmail;?></li>
+					<?if ($bugzillaEmail != "")  { ?><li>Bugzilla Login: <?=$bugzillaEmail;?></li> <? } ?>
 					<li>Amount: <?=$amount;?></li>
 					<li>Anonymity: <?=$anonymous;?></li>
 					<li>Comment: <?=$comment;?></li>
 				</ul>
 				<p>View our <a href="donorlist.php">Donor List</a></p>
 				<p>Your transaction has been completed, and a receipt for your purchase has been emailed to you.<br> You may log into your account at <a href='https://www.paypal.com'>www.paypal.com</a> to view details of this transaction.<br>
+				<? if ($benefit == 1) { ?>
 				<p>If you wish to link to the Friends of Eclipse Logo on your website or blog please use this code below</p>
 				<textarea rows="2" cols="60"><img src="http://www.eclipse.org/donate/images/friendslogo.jpg"></textarea>
+				<? } ?>
 			</div>
 			
 			<?
 		}
 		else if (strcmp ($lines[0], "FAIL") == 0) {
-			echo "<pre>" . var_dump($lines) . "</pre>";
+			?><p>There was an error in processing your transaction. Please contact <a href="mailto:friends@eclipse.org">friends@eclipse.org</a> with the transaction information from PayPal.</p>
 		}
 	}
 	
