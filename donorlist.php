@@ -36,7 +36,7 @@
 			</tr>
 			<?
 				$friendsContributionsList = new FriendsContributionsList();
-				$friendsContributionsList->selectFriendsContributionsList($start, 25);
+				$friendsContributionsList->selectFriendsContributionsList($start, 4);
 				
 				$friend = new Friend();
 				$contribution = new Contribution();
