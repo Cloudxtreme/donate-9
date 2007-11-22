@@ -164,7 +164,7 @@ class Friend {
 		}
 	}
 	
-	function selectFriendExists($_fieldname, $_searchfor) {
+	function selectFriendId($_fieldname, $_searchfor) {
 		$retVal = 0;
 
 		if( ($_fieldname != "") && ($_searchfor != "")) {
