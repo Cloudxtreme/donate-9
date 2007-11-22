@@ -109,7 +109,7 @@
 					
 				// Check to see if this transaction has already been processed.
 				$checkContribution = new Contribution();
-				if ($checkContribution->selectContributionExists($transactionID) == 0)
+				if ($checkContribution->selectContributionExists($transactionID) == FALSE)
 				{
 					$dateExpired = date("Y-m-d H:m:s", strtotime("+1 year"));
 					//Check to see if user already exists in friends

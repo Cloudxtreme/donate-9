@@ -84,7 +84,7 @@
 				$checkContribution = new Contribution();
 				$checkTrans = $checkContribution->selectContributionExists($transactionID);
 				echo "$transactionID - $checkTrans";
-				if ($checkTrans == 0)
+				if ($checkTrans == FALSE)
 				{
 					$dateExpired = date("Y-m-d H:m:s", strtotime("+1 year"));
 					//Check to see if user already exists in friends
