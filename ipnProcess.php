@@ -50,16 +50,16 @@
 			// check that payment_amount/payment_currency are correct
 			// process payment
 
-			$firstname = $keyarray['first_name'];
-			$lastname = $keyarray['last_name'];
-			$itemname = $keyarray['item_name'];
-			$amount = $keyarray['payment_gross'];
-			$bugzillaEmail = $keyarray['item_number'];
+			$firstname = $_POST['first_name'];
+			$lastname = $_POST['last_name'];
+			$itemname = $_POST['item_name'];
+			$amount = $_POST['payment_gross'];
+			$bugzillaEmail = $_POST['item_number'];
 			
-			$anonymous = $keyarray['option_selection2'];
-			$comment = $keyarray['option_selection1'];
-			$transactionID = $keyarray['txn_id'];
-			$paymentStatus = $keyarray['payment_status'];
+			$anonymous = $_POST['option_selection2'];
+			$comment = $_POST['option_selection1'];
+			$transactionID = $_POST['txn_id'];
+			$paymentStatus = $_POST['payment_status'];
 
 			if ($anonymous == "Public")
 			{
