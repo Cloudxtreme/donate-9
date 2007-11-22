@@ -101,7 +101,7 @@ class Contribution {
 			$dbc = new DBConnectionRW();
 			$dbh = $dbc->connect();
 
-			$sql = "SELECT transactionID
+			$sql = "SELECT transaction_id
 					FROM friends_contributions
 					WHERE transaction_id = " . $App->returnQuotedString($_transaction_id);
 
@@ -109,7 +109,7 @@ class Contribution {
 			if ($result)
 			{	
 				$myrow = mysql_fetch_array($result);
-				$result = $myrow['RecordCount'] > 1 ? 1 : 0;
+				$result = $myrow['RecordCount'] > 1 ? $myrow['transaction_id'] : 0;
 			}
 
 			$dbc->disconnect();

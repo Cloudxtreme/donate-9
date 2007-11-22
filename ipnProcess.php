@@ -12,10 +12,10 @@
 	}
 	
 	// post back to PayPal system to validate
-	$header .= "POST /cgi-bin/webscr HTTP/1.0\r\n";
+	$header .= "POST /testing/ipntest.php HTTP/1.0\r\n";
 	$header .= "Content-Type: application/x-www-form-urlencoded\r\n";
 	$header .= "Content-Length: " . strlen($req) . "\r\n\r\n";
-	$fp = fsockopen ('www.sandbox.paypal.com', 80, $errno, $errstr, 30);
+	$fp = fsockopen ('www.eliteweaver.co.uk', 80, $errno, $errstr, 30);
 	
 	
 	
@@ -82,7 +82,9 @@
 					
 				// Check to see if this transaction has already been processed.
 				$checkContribution = new Contribution();
-				if ($checkContribution->selectContributionExists($transactionID) == 0)
+				$checkTrans = $checkContribution->selectContributionExists($transactionID);
+				echo "$transactionID - $checkTrans";
+				if ($checkTrans == 0)
 				{
 					$dateExpired = date("Y-m-d H:m:s", strtotime("+1 year"));
 					//Check to see if user already exists in friends
