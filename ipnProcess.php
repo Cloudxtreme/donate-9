@@ -1,4 +1,4 @@
-<?php
+<?php 					require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	$App 	= new App();	
 
 	 require_once($_SERVER['DOCUMENT_ROOT'] . "/donate/classes/friend.class.php");
 	 require_once($_SERVER['DOCUMENT_ROOT'] . "/donate/classes/contribution.class.php");
