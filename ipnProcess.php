@@ -39,9 +39,8 @@
 		//loop through the $_POST array and print all vars to the screen.
 		
 		foreach($_POST as $key => $value){
-	        echo $key." = ". $value."<br>";
+	    //    echo $key." = ". $value."<br>";
 		}
-		var_dump($res);
 		$lines = explode("\n", $res);
 		$keyarray = array();
 		for ($i=1; $i<count($lines);$i++){
@@ -84,7 +83,7 @@
 			
 			if ($paymentStatus == "Completed")
 			{
-
+				echo "We Got Here";
 					
 				// Check to see if this transaction has already been processed.
 				$checkContribution = new Contribution();
