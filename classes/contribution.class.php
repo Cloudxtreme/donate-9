@@ -109,6 +109,7 @@ class Contribution {
 			if ($result)
 			{	
 				$myrow = mysql_fetch_array($result);
+				var_dump($myrow);
 				$result = $myrow['RecordCount'] > 1 ? $myrow['transaction_id'] : 0;
 			}
 
