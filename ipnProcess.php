@@ -78,7 +78,6 @@
 			
 			if ($paymentStatus == "Completed")
 			{
-				echo "We Got Here<br/>";
 					
 				// Check to see if this transaction has already been processed.
 				$checkContribution = new Contribution();

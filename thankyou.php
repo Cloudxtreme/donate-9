@@ -110,7 +110,6 @@
 				// Check to see if this transaction has already been processed.
 				$checkContribution = new Contribution();
 				$checkTrans = $checkContribution->selectContributionExists($transactionID);
-				echo "Checking Transaction - $checkTrans<br/>"; 
 				if ($checkTrans == FALSE)
 				{
 					//Check to see if user already exists in friends
