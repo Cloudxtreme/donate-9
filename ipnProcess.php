@@ -126,6 +126,9 @@
 						echo "New Contribution Inserted<br/>";
 					}
 				}
+				else {
+					echo "Transaction Check Failed<br/>";
+				}
 			}
 	
 	}
