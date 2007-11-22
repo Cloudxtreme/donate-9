@@ -41,14 +41,8 @@
 		foreach($_POST as $key => $value){
 	    //    echo $key." = ". $value."<br>";
 		}
-		$lines = explode("\n", $res);
-		$keyarray = array();
-		for ($i=1; $i<count($lines);$i++){
-			list($key,$val) = explode("=", $lines[$i]);
-			$keyarray[urldecode($key)] = urldecode($val);
-		}
 		echo "Parse Keys<br/>";
-		var_dump($keyarray);
+		var_dump($_POST);
 		
 			// check the payment_status is Completed
 			// check that txn_id has not been previously processed
