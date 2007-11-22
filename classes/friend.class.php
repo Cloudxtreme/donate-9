@@ -71,7 +71,7 @@ class Friend {
 	}
 	
 	function insertUpdateFriend() {
-		$result = 0;
+		$retVal = 0;
 
 		$App = new App();
 		#$ModLog = new ModLog();
@@ -94,7 +94,7 @@ class Friend {
 						friend_id = " . $this->getFriendID();
 
 				mysql_query($sql, $dbh);
-				$result = $this->friend_id;
+				$retVal = $this->friend_id;
 				#$ModLog->setLogAction("UPDATE");
 				#$ModLog->insertModLog();
 
@@ -117,13 +117,13 @@ class Friend {
 						" . $App->returnQuotedString($this->getIsAnonymous()) . ",
 						" . $App->returnQuotedString($this->getIsBenefit()) . ")";
 			mysql_query($sql, $dbh);
-			$result = mysql_insert_id($dbh);
+			$retVal = mysql_insert_id($dbh);
 			#$ModLog->setLogAction("INSERT");
 			#$ModLog->insertModLog();
 		}
 
 		$dbc->disconnect();
-	return $result;
+	return $retVal;
 	}
 
 
@@ -161,7 +161,7 @@ class Friend {
 	}
 	
 	function selectFriendExists($_fieldname, $_searchfor) {
-		$result = 0;
+		$retVal = 0;
 
 		if( ($_fieldname != "") && ($_searchfor != "")) {
 			$App = new App();
@@ -176,13 +176,13 @@ class Friend {
 			$result = mysql_query($sql, $dbh);
 			if ($result){
 				$myrow = mysql_fetch_array($result);
-				$result = $myrow['friend_id'];
+				$retVal = $myrow['friend_id'];
 			}
 
 			$dbc->disconnect();
 
 		}
-		return $result;
+		return $retVal;
 	}
 	
 	function getBugzillaIDFromEmail($_email) {
