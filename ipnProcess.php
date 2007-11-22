@@ -41,8 +41,6 @@
 		foreach($_POST as $key => $value){
 	    //    echo $key." = ". $value."<br>";
 		}
-		echo "Parse Keys<br/>";
-		var_dump($_POST);
 		
 			// check the payment_status is Completed
 			// check that txn_id has not been previously processed
@@ -80,7 +78,7 @@
 			
 			if ($paymentStatus == "Completed")
 			{
-				echo "We Got Here";
+				echo "We Got Here<br/>";
 					
 				// Check to see if this transaction has already been processed.
 				$checkContribution = new Contribution();
@@ -103,6 +101,7 @@
 						$insertContribution->setTransactionID($transactionID);
 						$insertContribution->insertContribution();
 						//Record Inserted
+						echo "New Contribution Inserted<br/>";
 					}
 					else {
 						// No friendID found so add a new friend record then add the contribution record.
@@ -115,6 +114,7 @@
 						$newFriend->setIsAnonymous($anonymousValue);
 						$newFriend->setIsBenefit($benefit);	
 						$newFriendID = $newFriend->insertUpdateFriend();
+						echo "New User Inserted<br/>";
 						
 						$insertContribution = new Contribution();
 						$insertContribution->setFriendID($newFriendID);
@@ -123,6 +123,7 @@
 						$insertContribution->setDateExpired($dateExpired);
 						$insertContribution->setTransactionID($transactionID);
 						$insertContribution->insertContribution();
+						echo "New Contribution Inserted<br/>";
 					}
 				}
 			}
