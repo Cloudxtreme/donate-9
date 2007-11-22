@@ -159,6 +159,8 @@
 	}
 	
 	fclose ($fp);
+	$html = ob_get_clean();
+	echo $html;
 ?>
 
 
