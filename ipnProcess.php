@@ -44,7 +44,7 @@
 		// parse the data
 		$lines = explode("\n", $res);
 		$keyarray = array();
-		if (strcmp ($lines[0], "SUCCESS") == 0) {
+		if (strcmp ($lines[0], "VERIFIED") == 0) {
 			for ($i=1; $i<count($lines);$i++){
 				list($key,$val) = explode("=", $lines[$i]);
 				$keyarray[urldecode($key)] = urldecode($val);
