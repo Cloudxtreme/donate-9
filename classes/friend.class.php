@@ -10,8 +10,8 @@
  *    Denis Roy (Eclipse Foundation)- initial API and implementation
  *******************************************************************************/
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/smartconnection.class.php");
-require_once("/home/data/httpd/eclipse-php-classes/system/dbconnection_bugs_ro.class.php");
-require_once("/home/data/httpd/eclipse-php-classes/system/dbconnection_rw.class.php");
+//require_once("/home/data/httpd/eclipse-php-classes/system/dbconnection_bugs_ro.class.php");
+//require_once("/home/data/httpd/eclipse-php-classes/system/dbconnection_rw.class.php");
 
 class Friend {
 
@@ -19,7 +19,7 @@ class Friend {
 	private $bugzilla_id	= "";
 	private $first_name		= "";
 	private $last_name		= "";
-	private $date_joined	= "";
+	private $date_joined	= NULL;
 	private $is_anonymous	= 0;
 	private $is_benefit		= 0;
 
@@ -80,14 +80,18 @@ class Friend {
 
 		$dbc = new DBConnectionRW();
 		$dbh = $dbc->connect();
-
+		if ($this->date_joined == NULL)
+			$default_date_joined = "NOW()";
+		else
+			$default_date_joined = $App->returnQuotedString($this->date_joined);
+		
 		if($this->selectFriendExists("friend_id", $this->getFriendID())) {
 			# update
 			$sql = "UPDATE friends SET
 						bugzilla_id = " . $App->returnQuotedString($this->getBugzillaID()) . ",
 						first_name = " . $App->returnQuotedString($this->getFirstName()) . ",
 						last_name = " . $App->returnQuotedString($this->getLastName()) . ",
-						date_joinded = " . $App->returnQuotedString($this->getDateJoined()) . ",
+						date_joinded = " . $default_date_joined . ",
 						is_anonymous = " . $App->returnQuotedString($this->getIsAnonymous()) . ",
 						is_benefit = " . $App->returnQuotedString($this->getIsBenefit()) . "
 					WHERE
@@ -113,7 +117,7 @@ class Friend {
 						" . $App->returnQuotedString($this->getBugzillaID()) . ",
 						" . $App->returnQuotedString($this->getFirstName()) . ",
 						" . $App->returnQuotedString($this->getLastName()) . ",
-						" . $App->returnQuotedString($this->getDateJoined()) . ",
+						" . $default_date_joined . ",
 						" . $App->returnQuotedString($this->getIsAnonymous()) . ",
 						" . $App->returnQuotedString($this->getIsBenefit()) . ")";
 			mysql_query($sql, $dbh);

@@ -10,13 +10,13 @@
  *    Nathan Gervais (Eclipse Foundation)- initial API and implementation
  *******************************************************************************/
 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/smartconnection.class.php");
-require_once("/home/data/httpd/eclipse-php-classes/system/dbconnection_rw.class.php");
+//require_once("/home/data/httpd/eclipse-php-classes/system/dbconnection_rw.class.php");
 
 class Contribution {
 	
 	private $friend_id = "";
 	private $contribution_id = "";
-	private $date_expired = "";
+	private $date_expired = NULL;
 	private $amount = "";
 	private $message = "";
 	private $transaction_id = "";
@@ -70,6 +70,10 @@ class Contribution {
 		}
 		else
 		{
+			if ($this->date_expired == NULL)
+				$default_date_expired = "DATE_ADD(NOW(), INTERVAL 1 YEAR)";
+			else
+				$default_date_expired = $App->returnQuotedString($this->date_expired);
 			# insert
 			$sql = "INSERT INTO friends_contributions (
 					friend_id,
@@ -81,7 +85,7 @@ class Contribution {
 					VALUES (
 					" . $App->returnQuotedString($this->getFriendID()) . ",
 					" . $App->returnQuotedString($this->getContributionID()) . ",
-					" . $App->returnQuotedString($this->getDateExpired()) . ",
+					" . $default_date_expired . ",
 					" . $App->returnQuotedString($this->getAmount()) . ",
 					" . $App->returnQuotedString($this->getMessage()) . ",
 					" . $App->returnQuotedString($this->getTransactionID()) . ")";

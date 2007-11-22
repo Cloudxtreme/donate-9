@@ -113,7 +113,6 @@
 				echo "Checking Transaction - $checkTrans<br/>"; 
 				if ($checkTrans == FALSE)
 				{
-					$dateExpired = date("Y-m-d H:m:s", strtotime("+1 year"));
 					//Check to see if user already exists in friends
 					$checkFriends = new Friend();
 					$bugzillaID = $checkFriends->getBugzillaIDFromEmail($bugzillaEmail);
@@ -126,19 +125,17 @@
 						$insertContribution->setFriendID($friendID);
 						$insertContribution->setAmount($amount);
 						$insertContribution->setMessage($message);
-						$insertContribution->setDateExpired($dateExpired);
 						$insertContribution->setTransactionID($transactionID);
 						$insertContribution->insertContribution();
 						//Record Inserted
 					}
 					else {
 						// No friendID found so add a new friend record then add the contribution record.
-						$now = date("Y-m-d H:i:s");
+						$now = "NOW()";
 						$newFriend = new Friend();
 						$newFriend->setFirstName($firstname);
 						$newFriend->setLastName($lastname);
 						$newFriend->setBugzillaID($bugzillaID);
-						$newFriend->setDateJoined($now);
 						$newFriend->setIsAnonymous($anonymousValue);
 						$newFriend->setIsBenefit($benefit);	
 						$newFriendID = $newFriend->insertUpdateFriend();
@@ -147,7 +144,6 @@
 						$insertContribution->setFriendID($newFriendID);
 						$insertContribution->setAmount($amount);
 						$insertContribution->setMessage($comment);
-						$insertContribution->setDateExpired($dateExpired);
 						$insertContribution->setTransactionID($transactionID);
 						$insertContribution->insertContribution();
 					}
