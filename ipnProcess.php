@@ -90,7 +90,7 @@
 					//Check to see if user already exists in friends
 					$checkFriends = new Friend();
 					$bugzillaID = $checkFriends->getBugzillaIDFromEmail($bugzillaEmail);
-					$friendID = $checkFriends->selectFriend("bugzilla_id", $bugzillaID);
+					$friendID = $checkFriends->selectFriendExists("bugzilla_id", $bugzillaID);
 					if ($friendID != 0)
 					{
 						// FriendID does not equal 0 so we have an existing user. We need to add a new contribution

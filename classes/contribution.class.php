@@ -93,7 +93,7 @@ class Contribution {
 	}
 	
 	function selectContributionExists($_transaction_id){
-		$result = 0;
+		$result = FALSE;
 		if ($_transaction_id != "")
 		{
 			$App = new App();
@@ -109,7 +109,8 @@ class Contribution {
 			if ($result)
 			{	
 				$myrow = mysql_fetch_array($result);
-				$result = $myrow['transaction_id'];
+				if ($myrow['transaction_id'] == $_transaction_id)
+				$result = TRUE;
 			}
 
 			$dbc->disconnect();

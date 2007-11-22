@@ -176,7 +176,7 @@ class Friend {
 			$result = mysql_query($sql, $dbh);
 			if ($result){
 				$myrow = mysql_fetch_array($result);
-				$result = $myrow['RecordCount'] > 1 ? $myrow['friend_id'] : 0;
+				$result = $myrow['friend_id'];
 			}
 
 			$dbc->disconnect();
