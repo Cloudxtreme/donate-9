@@ -97,11 +97,10 @@
 						$insertContribution = new Contribution();
 						$insertContribution->setFriendID($friendID);
 						$insertContribution->setAmount($amount);
-						$insertContribution->setMessage($message);
+						$insertContribution->setMessage($comment);
 						$insertContribution->setTransactionID($transactionID);
 						$insertContribution->insertContribution();
 						//Record Inserted
-						echo "New Contribution Inserted<br/>";
 					}
 					else {
 						// No friendID found so add a new friend record then add the contribution record.
@@ -112,7 +111,6 @@
 						$newFriend->setIsAnonymous($anonymousValue);
 						$newFriend->setIsBenefit($benefit);	
 						$newFriendID = $newFriend->insertUpdateFriend();
-						echo "New User Inserted<br/>";
 						
 						$insertContribution = new Contribution();
 						$insertContribution->setFriendID($newFriendID);
@@ -120,7 +118,6 @@
 						$insertContribution->setMessage($comment);
 						$insertContribution->setTransactionID($transactionID);
 						$insertContribution->insertContribution();
-						echo "New Contribution Inserted<br/>";
 					}
 				}
 				else {

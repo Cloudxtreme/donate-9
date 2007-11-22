@@ -85,7 +85,7 @@ class Friend {
 		else
 			$default_date_joined = $App->returnQuotedString($this->date_joined);
 		
-		if($this->selectFriendExists("friend_id", $this->getFriendID())) {
+		if($this->selectFriendID("friend_id", $this->getFriendID())) {
 			# update
 			$sql = "UPDATE friends SET
 						bugzilla_id = " . $App->returnQuotedString($this->getBugzillaID()) . ",

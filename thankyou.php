@@ -124,7 +124,7 @@
 						$insertContribution = new Contribution();
 						$insertContribution->setFriendID($friendID);
 						$insertContribution->setAmount($amount);
-						$insertContribution->setMessage($message);
+						$insertContribution->setMessage($comment);
 						$insertContribution->setTransactionID($transactionID);
 						$insertContribution->insertContribution();
 						//Record Inserted
