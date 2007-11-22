@@ -47,6 +47,9 @@
 			list($key,$val) = explode("=", $lines[$i]);
 			$keyarray[urldecode($key)] = urldecode($val);
 		}
+		echo "Parse Keys<br/>";
+		var_dump($keyarray);
+		
 			// check the payment_status is Completed
 			// check that txn_id has not been previously processed
 			// check that receiver_email is your Primary PayPal email
