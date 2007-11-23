@@ -54,9 +54,11 @@ class FriendsContributionsList {
 	    		FROM friends_contributions as FC
 	    		LEFT JOIN friends as F on FC.friend_id = F.friend_id
 	    		ORDER by FC.date_expired DESC";
-	    if (($_start != NULL) && ($_numrows !=NULL))
+	    if ($_start >= 0)
 	    {
-			$sql .= " LIMIT $_start, $_numrows";
+			$sql .= " LIMIT $_start";
+			if ($_numrows > 0)
+				$sql .= ", $_numrows";
 	    }
 	    $dbc = new DBConnection();
 	    $dbh = $dbc->connect();
