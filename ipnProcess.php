@@ -55,7 +55,7 @@
 			$bugzillaEmail = $_POST['item_number'];
 			
 			$anonymous = $_POST['option_selection2'];
-			$comment = $_POST['option_selection1'];
+			$comment = strip_tags($_POST['option_selection1']);
 			$transactionID = $_POST['txn_id'];
 			$paymentStatus = $_POST['payment_status'];
 

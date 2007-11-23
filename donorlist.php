@@ -62,7 +62,7 @@
 					{
 						$amount = $amount . ".00";
 					}
-					$comment = $contribution->getMessage();	
+					$comment = strip_tags($contribution->getMessage());	
 					$date = $friend->getDateJoined();			
 				?>
 				<tr class="donorRecord">

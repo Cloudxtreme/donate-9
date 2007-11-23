@@ -82,7 +82,7 @@
 			$bugzillaEmail = $keyarray['item_number'];
 			
 			$anonymous = $keyarray['option_selection2'];
-			$comment = $keyarray['option_selection1'];
+			$comment = strip_tags($keyarray['option_selection1']);
 			$transactionID = $keyarray['txn_id'];
 			$paymentStatus = $keyarray['payment_status'];
 

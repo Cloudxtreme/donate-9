@@ -35,7 +35,7 @@ class FriendsContributionsList {
             }
     }    
     
-	function selectFriendsContributionsList($_start, $_numrows) {
+	function selectFriendsContributionsList($_start = NULL, $_numrows = NULL) {
 		
 		$App = new App();
 	    $sql = "SELECT 
@@ -54,9 +54,9 @@ class FriendsContributionsList {
 	    		FROM friends_contributions as FC
 	    		LEFT JOIN friends as F on FC.friend_id = F.friend_id
 	    		ORDER by FC.date_expired DESC";
-	    if (($_start != "") && ($_numrows !=""))
+	    if (($_start != NULL) && ($_numrows !=NULL))
 	    {
-			$sql = " LIMIT $_start, $_numrows";
+			$sql .= " LIMIT $_start, $_numrows";
 	    }
 	    $dbc = new DBConnection();
 	    $dbh = $dbc->connect();
