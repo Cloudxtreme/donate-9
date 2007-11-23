@@ -79,8 +79,8 @@
 					<td align="right">$<?=$amount;?> USD</td>
 				</tr>		
 				<?}	?>
-		</table><br/><br/>
-		<table class="donorlist">
+		</table>
+		<table class="donorList">
 			<tr>
 				<td align="left">
 			<?

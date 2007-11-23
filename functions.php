@@ -32,5 +32,30 @@ function sideDonorList($_numrows) {
 	}
 	echo "<div class=\"more\"><a href=\"donorlist.php\">Donor List</a></div>";
 }
-
+function displayPager($_start, $_pageValue, $_pageCount)
+{
+	ob_start();
+	?>
+	<table class="donorList">
+			<tr>
+				<td align="left">
+			<?
+				if ($_start >= $_pageValue)
+				{
+					?><a href="donorlist.php?start=<?=$_start-$_pageValue;?>"><< Previous Page</a><?
+				}
+			?>&nbsp;</td>
+				<td align="right">
+			<?
+				if ((($_pageCount - $_start)% $_pageValue) > 0)
+				{
+					?><a href="donorlist.php?start=<?=$_start+$_pageValue;?>">Next Page >></a><?
+				}
+			?>
+				</td>
+			</tr>
+		</table>
+	<?
+	return ob_get_clean();
+}	
 ?>

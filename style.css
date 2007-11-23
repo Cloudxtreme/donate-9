@@ -1,6 +1,11 @@
 .footNote {
 	font-size:smaller;
 }
+.pager {
+	width:100%;
+	padding:0px;
+	margin:0px;
+}
 
 .donorList {
 	width:100%;
