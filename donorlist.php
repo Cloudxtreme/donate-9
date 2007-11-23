@@ -21,6 +21,7 @@
 	require_once("classes/friendsContributionsList.class.php");
 	ob_start();	
 	$start = $App->getHTTPParameter("start");
+	$pageValue = 10;
 	if ($start == "")
 		$start = 0;
 	?>
@@ -42,7 +43,7 @@
 				$totalContributionCount = NULL;
 				
 				$friendsContributionsList = new FriendsContributionsList();
-				$friendsContributionsList->selectFriendsContributionsList($start, 25);
+				$friendsContributionsList->selectFriendsContributionsList($start, $pageValue);
 				
 				$friend = new Friend();
 				$contribution = new Contribution();
@@ -81,13 +82,13 @@
 		</table><br/><br/>
 		<div id="pager">
 			<?
-				if ($start >= 25)
+				if ($start >= $pageValue)
 				{
-					?><a href="donorlist.php?start=<?=$start-25;?>">Previous Page</a><?
+					?><a href="donorlist.php?start=<?=$start-$pageValue;?>">Previous Page</a><?
 				}
-				if ((($pageCount - $start)% 25) > 0)
+				if ((($pageCount - $start)% $pageValue) > 0)
 				{
-					?><a href="donorlist.php?start=<?=$start+25;?>">Next Page</a><?
+					?><a href="donorlist.php?start=<?=$start+$pageValue;?>">Next Page</a><?
 				}
 			?>
 		</div>
