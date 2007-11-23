@@ -172,7 +172,7 @@
 			</ul>
 		</div>
 			
-	</div>
+	</div> 
 	<?
 	$html = ob_get_clean();
 	# Generate the web page
