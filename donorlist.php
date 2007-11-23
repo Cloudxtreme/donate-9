@@ -35,6 +35,12 @@
 				<td width="20%" align="right">Amount</td>
 			</tr>
 			<?
+				// Get total number of items so we can know whether to page or not.
+				$totalContributionCount = new FriendsContributionsList();
+				$totalContributionCount->selectFriendsContributionsList();
+				$pageCount = $totalContributionCount->getCount();
+				$totalContributionCount = NULL;
+				
 				$friendsContributionsList = new FriendsContributionsList();
 				$friendsContributionsList->selectFriendsContributionsList($start, 25);
 				
@@ -74,6 +80,16 @@
 				<?}	?>
 		</table><br/><br/>
 		<div id="pager">
+			<?
+				if ($start >= 25)
+				{
+					?><a href="donorlist.php?start=<?=$start-25;?>">Previous Page</a><?
+				}
+				if ((($pageCount - $start)% 25) > 0)
+				{
+					?><a href="donorlist.php?start=<?=$start+25;?>">Next Page</a><?
+				}
+			?>
 		</div>
 	</div>
 	<div id="rightcolumn">
