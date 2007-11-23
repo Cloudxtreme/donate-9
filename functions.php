@@ -37,7 +37,7 @@ function displayPager($_start, $_pageValue, $_pageCount)
 {
 	ob_start();
 	?>
-	<table class="donorList">
+	<table class="pager">
 			<tr>
 				<td align="left">
 			<?
