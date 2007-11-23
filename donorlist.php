@@ -82,7 +82,6 @@
 		</table><br/><br/>
 		<div id="pager">
 			<?
-				echo "$pageCount - $start";
 				if ($start >= $pageValue)
 				{
 					?><a href="donorlist.php?start=<?=$start-$pageValue;?>">Previous Page</a><?
