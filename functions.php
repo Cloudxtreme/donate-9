@@ -2,7 +2,7 @@
 
 function sideDonorList($_numrows) {
 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/smartconnection.class.php");
-	require_once("classes/friendsContributionsList.class.php");
+	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/classes/friends/friendsContributionsList.class.php");
 	
 	$friendsContributionsList = new FriendsContributionsList();
 	$friendsContributionsList->selectFriendsContributionsList(0, $_numrows);

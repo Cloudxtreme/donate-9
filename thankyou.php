@@ -19,8 +19,8 @@
 	$pageAuthor		= "Nathan Gervais";
 
 
-	 require_once($_SERVER['DOCUMENT_ROOT'] . "/donate/classes/friend.class.php");
-	 require_once($_SERVER['DOCUMENT_ROOT'] . "/donate/classes/contribution.class.php");
+	 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/classes/friends/friend.class.php");
+	 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/classes/friends/contribution.class.php");
 	
 	ob_start();	
 	// read the post from PayPal system and add 'cmd'
