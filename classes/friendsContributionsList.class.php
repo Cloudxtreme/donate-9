@@ -60,7 +60,6 @@ class FriendsContributionsList {
 			if ($_numrows > 0)
 				$sql .= ", $_numrows";
 	    }
-	    echo $sql;
 	    $dbc = new DBConnection();
 	    $dbh = $dbc->connect();
 	
