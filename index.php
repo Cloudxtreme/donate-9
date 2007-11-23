@@ -39,6 +39,7 @@
  			else {
  				b.setAttribute("disabled", "");
  			}
+ 		}
  		function validateForm() {
  			var fn = document.getElementById("first_name");
  			var ln = document.getElementById("last_name");
@@ -60,7 +61,6 @@
  			}
  		}
  		
- 		}		
 	</script>
 	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 	<div id="midcolumn">
@@ -81,7 +81,7 @@
 		</div>
 		<div class="homeitem">
 		<h3>Donate Now</h3>
-				<form ACTION="https://www.sandbox.paypal.com/cgi-bin/webscr" METHOD="POST" name="donateForm" onsubmit="validateForm();">
+				<form ACTION="https://www.sandbox.paypal.com/cgi-bin/webscr" METHOD="POST" name="donateForm" onsubmit="return validateForm();">
 				<input type="hidden" name="business" value="nathan_1195237105_biz@eclipse.org">
 				<!--  <input type="hidden" name="business" value="lynn@eclipse.org">  
 				<input type="hidden" name="return" value="http://www.eclipse.org/friends/thankyou.php">
@@ -104,7 +104,7 @@
 						</tr>
 						<tr>
 							<td>Donation Amount<span class="required">*</span>:</td>
-							<td><input type="text" name="amount" id="amount" size=10 onkeyup="amountCheck();">USD</td>
+							<td><input type="text" name="amount" id="amount" size=10 onkeyup="amountCheck();" onblur="amountCheck();">USD</td>
 						</tr>						
 						<tr>
 							<td>Message:</td>
@@ -135,7 +135,7 @@
 						<tr>
 							<td><div class="required" style="display:inline;"> * Required</div></td>
 							<td>						
-								<input type="submit" value="Donate"/> <img src="images/paypal.gif" align="absbottom" alt="PayPal"></td>
+								<input type="submit" value="Donate" /> <img src="images/paypal.gif" align="absbottom" alt="PayPal"></td>
 						</tr>
 					</table>
 				</form>
