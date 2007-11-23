@@ -27,7 +27,20 @@
  		if (t.match('invisible')) { t = t.replace(/invisible/gi, 'visible'); }
  		else { t = t.replace(/visible/gi, 'invisible'); }
  		e.className = t;
-	}		
+		}
+		 		
+ 		function amountCheck() {
+ 			var a = document.getElementById("amount");
+ 			var b = document.getElementById("bugzilla"); 
+ 			if (a.value >=35)
+ 			{
+ 				b.removeAttribute("disabled");
+ 			}
+ 			else {
+ 				b.setAttribute("disabled", "");
+ 			}
+ 				
+ 		}		
 	</script>
 	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 	<div id="midcolumn">
@@ -48,7 +61,7 @@
 		</div>
 		<div class="homeitem">
 		<h3>Donate Now</h3>
-				<form ACTION="https://www.sandbox.paypal.com/cgi-bin/webscr" METHOD="POST">
+				<form ACTION="https://www.sandbox.paypal.com/cgi-bin/webscr" METHOD="POST" name="donateForm">
 				<input type="hidden" name="business" value="nathan_1195237105_biz@eclipse.org">
 				<!--  <input type="hidden" name="business" value="lynn@eclipse.org">  
 				<input type="hidden" name="return" value="http://www.eclipse.org/friends/thankyou.php">
@@ -71,7 +84,7 @@
 						</tr>
 						<tr>
 							<td>Donation Amount<span class="required">*</span>:</td>
-							<td><input type="text" name="amount" size=10>USD</td>
+							<td><input type="text" name="amount" id="amount" size=10 onkeyup="amountCheck();">USD</td>
 						</tr>						
 						<tr>
 							<td>Message:</td>
@@ -93,7 +106,7 @@
 						</tr>
 						<tr>
 							<td>Bugzilla Login:</td>
-							<td><input type="text" name="item_number" size="30"></td>
+							<td><input type="text" name="item_number" id="bugzilla" size="30" disabled></td>
 						</tr>
 						<tr>
 							<td colspan=2><br/></td>
