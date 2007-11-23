@@ -24,6 +24,10 @@
 	$pageValue = 10;
 	if (!$start)
 		$start = 0;
+	$totalContributionCount = new FriendsContributionsList();
+	$totalContributionCount->selectFriendsContributionsList();
+	$pageCount = $totalContributionCount->getCount();
+	$totalContributionCount = NULL;		
 	?>
 	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 	<div id="midcolumn">
@@ -37,10 +41,7 @@
 			</tr>
 			<?
 				// Get total number of items so we can know whether to page or not.
-				$totalContributionCount = new FriendsContributionsList();
-				$totalContributionCount->selectFriendsContributionsList();
-				$pageCount = $totalContributionCount->getCount();
-				$totalContributionCount = NULL;
+
 				
 				$friendsContributionsList = new FriendsContributionsList();
 				$friendsContributionsList->selectFriendsContributionsList($start, $pageValue);
