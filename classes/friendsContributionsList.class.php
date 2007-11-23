@@ -35,7 +35,7 @@ class FriendsContributionsList {
             }
     }    
     
-	function selectFriendsContributionsList($_start = NULL, $_numrows = NULL) {
+	function selectFriendsContributionsList($_start = -1, $_numrows = -1) {
 		
 		$App = new App();
 	    $sql = "SELECT 
