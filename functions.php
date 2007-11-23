@@ -48,7 +48,7 @@ function displayPager($_start, $_pageValue, $_pageCount)
 			?>&nbsp;</td>
 				<td align="right">
 			<?
-				if ((($_pageCount - $_start)% $_pageValue) > 0)
+				if (($_start + $_pageValue) < $_pageCount)
 				{
 					?><a href="donorlist.php?start=<?=$_start+$_pageValue;?>">Next Page >></a><?
 				}
