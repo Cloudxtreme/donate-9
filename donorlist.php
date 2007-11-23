@@ -20,9 +20,9 @@
 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/smartconnection.class.php");
 	require_once("classes/friendsContributionsList.class.php");
 	ob_start();	
-	$start = $App->getHTTPParameter("start");
+	$start = $_GET['start'];
 	$pageValue = 10;
-	if (isset($start))
+	if (!$start)
 		$start = 0;
 	?>
 	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
