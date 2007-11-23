@@ -28,7 +28,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 	<div id="midcolumn">
 		<h1><?=$pageTitle;?></h1>
-		
+		<?=displayPager($start, $pageValue, $pageCount)?>
 		<table class="donorList" cellspacing=0>
 			<tr class="donorHeader">
 				<td colspan="2" width="60%">Name and Message</td>
@@ -80,25 +80,8 @@
 				</tr>		
 				<?}	?>
 		</table>
-		<table class="donorList">
-			<tr>
-				<td align="left">
-			<?
-				if ($start >= $pageValue)
-				{
-					?><a href="donorlist.php?start=<?=$start-$pageValue;?>"><< Previous Page</a><?
-				}
-			?>&nbsp;</td>
-				<td align="right">
-			<?
-				if ((($pageCount - $start)% $pageValue) > 0)
-				{
-					?><a href="donorlist.php?start=<?=$start+$pageValue;?>">Next Page >></a><?
-				}
-			?>
-				</td>
-			</tr>
-		</table>				
+		<?=displayPager($start, $pageValue, $pageCount)?>
+		<br/><br/>				
 	</div>
 	<div id="rightcolumn">
 		<div class="sideitem">
