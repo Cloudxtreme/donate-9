@@ -2,7 +2,7 @@
 
 	#*****************************************************************************
 	#
-	# index.php (/friends)
+	# index.php (/donate)
 	#
 	# Author: 		Nathan Gervais
 	# Date:			2007-11-07
@@ -39,7 +39,27 @@
  			else {
  				b.setAttribute("disabled", "");
  			}
- 				
+ 		function validateForm() {
+ 			var fn = document.getElementById("first_name");
+ 			var ln = document.getElementById("last_name");
+ 			var a = document.getElementById("amount");
+ 			if (fn.value.length == 0)
+ 			{
+ 				alert("Please specify a first name.");
+ 				return false;
+ 			}
+ 			if (ln.value.length == 0)
+ 			{
+ 				alert("Please specify a last name.");
+ 				return false;
+ 			}
+ 			if (a.value <= 0 || a.value.length == 0)
+ 			{
+ 				alert("Please specify an amount.");
+ 				return false;
+ 			}
+ 		}
+ 		
  		}		
 	</script>
 	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
@@ -61,7 +81,7 @@
 		</div>
 		<div class="homeitem">
 		<h3>Donate Now</h3>
-				<form ACTION="https://www.sandbox.paypal.com/cgi-bin/webscr" METHOD="POST" name="donateForm">
+				<form ACTION="https://www.sandbox.paypal.com/cgi-bin/webscr" METHOD="POST" name="donateForm" onsubmit="validateForm();">
 				<input type="hidden" name="business" value="nathan_1195237105_biz@eclipse.org">
 				<!--  <input type="hidden" name="business" value="lynn@eclipse.org">  
 				<input type="hidden" name="return" value="http://www.eclipse.org/friends/thankyou.php">
@@ -76,11 +96,11 @@
 					<table width="100%">
 						<tr>
 							<td width="280">First Name<span class="required">*</span>:</td>
-							<td><input type="text" name="first_name" size="30"></td>
+							<td><input type="text" name="first_name" size="30" id="first_name"></td>
 						</tr>
 						<tr>
 							<td width="280">Last Name<span class="required">*</span>:</td>
-							<td><input type="text" name="last_name" size="30"></td>
+							<td><input type="text" name="last_name" size="30" id="last_name"></td>
 						</tr>
 						<tr>
 							<td>Donation Amount<span class="required">*</span>:</td>
