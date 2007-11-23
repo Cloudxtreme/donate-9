@@ -22,7 +22,7 @@
 	ob_start();	
 	$start = $App->getHTTPParameter("start");
 	$pageValue = 10;
-	if ($start == "")
+	if (isset($start))
 		$start = 0;
 	?>
 	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
