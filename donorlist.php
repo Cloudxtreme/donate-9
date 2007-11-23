@@ -80,17 +80,25 @@
 				</tr>		
 				<?}	?>
 		</table><br/><br/>
-		<div id="pager">
+		<<table class="donorlist">
+			<tr>
+				<td align="left">
 			<?
 				if ($start >= $pageValue)
 				{
-					?><a href="donorlist.php?start=<?=$start-$pageValue;?>">Previous Page</a><?
+					?><a href="donorlist.php?start=<?=$start-$pageValue;?>"><< Previous Page</a><?
 				}
+			?>&nbsp;</td>
+				<td align="right">
+			<?
 				if ((($pageCount - $start)% $pageValue) > 0)
 				{
-					?><a href="donorlist.php?start=<?=$start+$pageValue;?>">Next Page</a><?
+					?><a href="donorlist.php?start=<?=$start+$pageValue;?>">Next Page >></a><?
 				}
 			?>
+				</td>
+			</tr>
+		</table>				
 		</div>
 	</div>
 	<div id="rightcolumn">
