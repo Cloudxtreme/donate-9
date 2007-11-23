@@ -80,7 +80,7 @@
 				</tr>		
 				<?}	?>
 		</table><br/><br/>
-		<<table class="donorlist">
+		<table class="donorlist">
 			<tr>
 				<td align="left">
 			<?
@@ -99,7 +99,6 @@
 				</td>
 			</tr>
 		</table>				
-		</div>
 	</div>
 	<div id="rightcolumn">
 		<div class="sideitem">
