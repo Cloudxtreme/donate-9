@@ -32,6 +32,7 @@ function sideDonorList($_numrows) {
 	}
 	echo "<div class=\"more\"><a href=\"donorlist.php\">Donor List</a></div>";
 }
+
 function displayPager($_start, $_pageValue, $_pageCount)
 {
 	ob_start();

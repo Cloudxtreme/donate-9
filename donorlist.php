@@ -19,6 +19,7 @@
 	$pageAuthor		= "Nathan Gervais";
 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/smartconnection.class.php");
 	require_once("classes/friendsContributionsList.class.php");
+	require_once("functions.php");
 	ob_start();	
 	$start = $_GET['start'];
 	$pageValue = 10;
@@ -32,7 +33,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 	<div id="midcolumn">
 		<h1><?=$pageTitle;?></h1>
-		<?=displayPager($start, $pageValue, $pageCount)?>
+		<?=displayPager($start, $pageValue, $pageCount);?>
 		<table class="donorList" cellspacing=0>
 			<tr class="donorHeader">
 				<td colspan="2" width="60%">Name and Message</td>
@@ -81,7 +82,7 @@
 				</tr>		
 				<?}	?>
 		</table>
-		<?=displayPager($start, $pageValue, $pageCount)?>
+		<?=displayPager($start, $pageValue, $pageCount);?>
 		<br/><br/>				
 	</div>
 	<div id="rightcolumn">
