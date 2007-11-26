@@ -68,15 +68,18 @@
  				alert("Please specify an amount.");
  				return false;
  			}
- 			if (v.innerHTML.length == 0 && b.value.length !=0)
+ 			if (a.value >=35)
  			{
- 				alert("Please verify your bugzilla login to continue");
- 				return false;
- 			}
- 			if (v.innerHTML != "Verified!" && a.value >= 35)
- 			{
- 				alert ("Your Bugzilla Login is not correct.");
- 				return false;
+	 			if (v.innerHTML.length == 0 && b.value.length !=0)
+	 			{
+	 				alert("Please verify your bugzilla login to continue");
+	 				return false;
+	 			}
+	 			if (v.innerHTML != "Verified!")
+	 			{
+	 				alert ("Your Bugzilla Login is not correct.");
+	 				return false;
+	 			}
  			}
  		}
  		

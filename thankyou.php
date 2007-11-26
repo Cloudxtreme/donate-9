@@ -162,6 +162,7 @@
 			<div id="midcolumn">
 				<p><h1>Thank you for your donation!</h1></p>
 				<p>Your transaction has been completed and a receipt for your purchase has been emailed to you.<br/><br/>			
+				<div class="homeitem">
 				<h3><b>Donation Details</b></h3>
 				<ul>
 					<li>Name: <?=$firstname;?> <?=$lastname;?></li>
@@ -170,6 +171,7 @@
 					<li>Anonymity: <?=$anonymous;?></li>
 					<li>Comment: <?=$comment;?></li>
 				</ul>
+				</div>
 				<br/>
 				<h3>View our <a href="donorlist.php">Donor List</a></h3><br/>
 				
@@ -179,7 +181,7 @@
 					<br/>		
 					<h3>Friends of Eclipse Logo</h3>	
 						<p>If you wish to link to the Friends of Eclipse Logo on your website or blog please use this code below<br/><br/><img src="images/friendslogo.jpg"/>
-						&lt;img src="http://www.eclipse.org/donate/images/friendslogo.jpg"/&gt;</p>
+						<br/><pre>&lt;img src="http://www.eclipse.org/donate/images/friendslogo.jpg"/&gt;</pre></p>
 				<? } ?>
 			</div>
 			

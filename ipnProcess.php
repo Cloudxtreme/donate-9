@@ -91,6 +91,15 @@
 					$friendID = $checkFriends->selectFriendID("bugzilla_id", $bugzillaID);
 					if ($friendID != 0)
 					{
+						// Lets Update the Friend Information
+						$newFriend = new Friend();
+						$newFriend->setFirstName($firstname);
+						$newFriend->setLastName($lastname);
+						$newFriend->setBugzillaID($bugzillaID);
+						$newFriend->setIsAnonymous($anonymousValue);
+						$newFriend->setIsBenefit($benefit);	
+						$newFriendID = $newFriend->insertUpdateFriend();
+						
 						// FriendID does not equal 0 so we have an existing user. We need to add a new contribution
 
 						$insertContribution = new Contribution();
