@@ -90,6 +90,7 @@ function updatePage()
 	var b = document.getElementById('bugzilla');
     if (ajaxObject.readyState == 4){
     	response = ajaxObject.responseText;
+    	e.innerHTML = response;
     	if (response == "Verified!")
     	{
     		e.setAttribute("class", "green");
@@ -102,6 +103,6 @@ function updatePage()
     		b.setAttribute("style","border:2px solid #FF0000;");
     		validateForm();
     	}
-    	e.innerHTML = response;
+    	
     }
 }
