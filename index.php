@@ -102,11 +102,11 @@
 					<table width="100%">
 						<tr>
 							<td width="280">First Name<span class="required">*</span>:</td>
-							<td><input type="text" name="first_name" size="30" id="first_name"></td>
+							<td><input type="text" name="first_name" size="30" id="first_name" maxlength="64"></td>
 						</tr>
 						<tr>
 							<td width="280">Last Name<span class="required">*</span>:</td>
-							<td><input type="text" name="last_name" size="30" id="last_name"></td>
+							<td><input type="text" name="last_name" size="30" id="last_name" maxlength="64"></td>
 						</tr>
 						<tr>
 							<td>Donation Amount<span class="required">*</span>:</td>
@@ -158,7 +158,7 @@
 			<p align="center"><img src="images/friendslogo.jpg"></p>
 		</div>		
 		<div style="clear:both">
-			<p class="footNote">*Eclipse Foundation Inc. is a not-for-profit, member supported corporation. Please note that contributions or gifts to the Ecilpse Foundation Inc. are not tax deductible as charitable contributions, but may be tax deductible to you or your organization as a trade or business expense. Contributions will not be restricted to the activities described, but will be put into a general operating fund.</p>
+			<p class="footNote">*Eclipse Foundation Inc. is a not-for-profit, member supported corporation. Please note that contributions or gifts to the Ecilpse Foundation Inc. are not tax deductible as charitable contributions. Contributions will not be restricted to the activities described, but will be put into a general operating fund.</p>
 			<p class="footNote">**Eclipse Foundation Inc. cannot guarantee that the Friends mirror will be faster than its other mirrors, however it will give users of this mirror priority.</p>
 
 		</div>

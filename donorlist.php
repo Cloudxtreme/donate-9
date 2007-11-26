@@ -72,6 +72,16 @@
 						$amount = $amount . ".00";
 					}
 					$comment = strip_tags($contribution->getMessage());	
+					if (strlen($comment) > 80)
+						if (strpos($comment, ' ') == 0 )
+						{
+							$commentArray = str_split($comment, 80);
+							$comment = 0;
+							foreach ($commentArray as $value)
+							{
+								$comment .= $value . " ";
+							}
+						}
 					$date = $friend->getDateJoined();			
 				?>
 				<tr class="donorRecord">
