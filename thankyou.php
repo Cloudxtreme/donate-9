@@ -172,17 +172,18 @@
 					<li>Comment: <?=$comment;?></li>
 				</ul>
 				</div>
-				<br/>
-				<h3>View our <a href="donorlist.php">Donor List</a></h3><br/>
-				
 				<? if ($benefit == 1) { ?>
+				<div class="homeitem">
 					<h3>Friends of Eclipse Login</h3>
 						<p>Visit <a href="http://dev.eclipse.org/site_login">http://dev.eclipse.org/site_login</a> to get access to the Friends of Eclipse Mirror</p>
 					<br/>		
 					<h3>Friends of Eclipse Logo</h3>	
 						<p>If you wish to link to the Friends of Eclipse Logo on your website or blog please use this code below<br/><br/><img src="images/friendslogo.jpg"/>
 						<br/><pre>&lt;img src="http://www.eclipse.org/donate/images/friendslogo.jpg"/&gt;</pre></p>
+				</div>
 				<? } ?>
+				<div class="clearer"></div>
+				<h3>View our <a href="donorlist.php">Donor List</a></h3><br/>
 			</div>
 			
 			<?
