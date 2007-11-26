@@ -91,11 +91,8 @@
 							<td><input type="text" name="item_number" id="bugzilla" size="30" disabled></td>
 						</tr>
 						<tr>
-							<td>&nbsp;</td>
-							<td align="right"><a onclick="verifyBugzillaLogin();"  style="font-size:75%;cursor:pointer;">Verify Bugzilla ID</a><br/></td>
-
+							<td colspan="2"><br/></td>
 						</tr>
-	
 						<tr>
 							<td><div class="required" style="display:inline;"> * Required</div></td>
 							<td>						
