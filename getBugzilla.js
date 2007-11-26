@@ -90,23 +90,22 @@ function updatePage()
 	var b = document.getElementById('bugzilla');
     if (ajaxObject.readyState == 4){
     	response = ajaxObject.responseText;
-    	e.innerHTML = response;
     	if (response == "Verified!" || b.value.length == 0)
    		{
     		if (response == "Verified!") 
 			{
+				e.innerHTML = response;    	
 				e.setAttribute("class", "green");
 				b.setAttribute("style","border:2px solid green;");
 			}
     		if (validateForm())
     			document.donateForm.submit();
 	    }
-    	else if (response == "Invalid") {
-    		
+    	else {
+    		e.innerHTML = response;    	
     		e.setAttribute("class", "red");
     		b.setAttribute("style","border:2px solid #FF0000;");
     		validateForm();
     	}
-    	
     }
 }
