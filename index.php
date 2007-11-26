@@ -68,7 +68,7 @@
  				alert("Please specify an amount.");
  				return false;
  			}
- 			if (v.value.length == 0 && b.value.length !=0)
+ 			if (v.innerHTML.length == 0 && b.value.length !=0)
  			{
  				alert("Please verify your bugzilla login to continue");
  				return false;
