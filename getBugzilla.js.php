@@ -23,10 +23,10 @@ function amountCheck() {
 	var b = document.getElementById("bugzilla"); 
 	if (a.value >=35)
 	{
-		b.removeAttribute("readonly");
+		b.removeAttribute("disabled");
 	}
 	else {
-		b.setAttribute("readonly", "");
+		b.setAttribute("disabled", "");
 	}
 }
 function validateForm() {
