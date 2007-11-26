@@ -152,7 +152,7 @@
 			
 			<div id="midcolumn">
 				<p><h1>Thank you for your donation!</h1></p>
-				<p>Your transaction has been completed, and a receipt for your purchase has been emailed to you.<br> You may log into your account at <a href='https://www.paypal.com'>www.paypal.com</a> to view details of this transaction.<br/><br/>			
+				<p>Your transaction has been completed and a receipt for your purchase has been emailed to you.<br/><br/>			
 				<h3><b>Donation Details</b></h3>
 				<ul>
 					<li>Name: <?=$firstname;?> <?=$lastname;?></li>
@@ -161,17 +161,17 @@
 					<li>Anonymity: <?=$anonymous;?></li>
 					<li>Comment: <?=$comment;?></li>
 				</ul>
-				<table>
-					<tr>
-						<td>View our <a href="donorlist.php">Donor List</a></td>
+				<br/>
+				<h3>View our <a href="donorlist.php">Donor List</a></h3><br/><br/>
 				
 				<? if ($benefit == 1) { ?>
-						<td>For the Friends of Eclipse Login Page please visit: <a href="http://dev.eclipse.org/site_login">http://dev.eclipse.org/site_login</a>.  Provide your Bugzilla Login Credentials to proceed</td>
-						<td>If you wish to link to the Friends of Eclipse Logo on your website or blog please use this code below<br/><img src="images/friendslogo.jpg"/>
-						<textarea rows="2" cols="20"><img src="http://www.eclipse.org/donate/images/friendslogo.jpg"></textarea></td>
+					<h3>Friends of Eclipse Login</h3>
+						<p>Visit <a href="http://dev.eclipse.org/site_login">http://dev.eclipse.org/site_login</a> to get access to the Friends of Eclipse Mirror</p>
+					<br/><br/>					
+					<h3>Friends of Eclipse Logo</h3>	
+						<p>If you wish to link to the Friends of Eclipse Logo on your website or blog please use this code below<br/><img src="images/friendslogo.jpg"/>
+						<pre><img src="http://www.eclipse.org/donate/images/friendslogo.jpg"></pre></p>
 				<? } ?>
-					</tr>
-				</table>
 			</div>
 			
 			<?
