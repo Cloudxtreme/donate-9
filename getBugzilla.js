@@ -82,7 +82,7 @@ function verifyBugzillaLogin()
 	{
 		v.innerHTML = "";
 		v.removeAttribute("class");
-		v.removeAttribute("style");
+		bugzillaLogin.removeAttribute("style");
 	}
 	var url = "ajaxBugzilla.php?bugzillaLogin=" + bugzillaLogin.value;
 	ajaxObject.open("GET", url, true);

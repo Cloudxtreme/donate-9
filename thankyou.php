@@ -170,17 +170,19 @@
 					<li>Amount: <?=$amount;?></li>
 					<li>Anonymity: <?=$anonymous;?></li>
 					<li>Comment: <?=$comment;?></li>
-					<li><b>View our <a href="donorlist.php">Donor List</a></b></li>
 				</ul>
+				<br/><br/><div align="middle"><b style="font-size:120%">View our <a href="donorlist.php">Donor List</a></b></div>
 				</div>
 				<? if ($benefit == 1) { ?>
 				<div class="homeitem">
-					<h3>Friends of Eclipse Login</h3>
-						<p>Visit <a href="http://dev.eclipse.org/site_login">http://dev.eclipse.org/site_login</a> to get access to the Friends of Eclipse Mirror</p>
+					<h3>Friends of Eclipse</h3>
+					<div style="padding-left:5px;">
+						<p><h2>Login</h2>
+						Visit <a href="http://dev.eclipse.org/site_login">http://dev.eclipse.org/site_login</a> to get access to the Friends of Eclipse Mirror</p>
 					<br/>		
-					<h3>Friends of Eclipse Logo</h3>	
-						<p>If you wish to link to the Friends of Eclipse Logo on your website or blog please use this code below<br/><br/><div align="middle"><img align="middle" src="images/friendslogo.jpg"/></div>
+						<p><h2>Logo</h2>If you wish to link to the Friends of Eclipse Logo on your website or blog please use this code below<br/><br/><div align="middle"><img align="middle" src="images/friendslogo.jpg"/></div>
 						<br/><code>&lt;img src="http://www.eclipse.org/donate/images/friendslogo.jpg"/&gt;</code></p>
+					</div>
 				</div>
 				<? } ?>
 				<div class="clearer"></div>
