@@ -22,67 +22,7 @@
 	?>
 	<script type="text/javascript" src="getBugzilla.js"></script>
 	<script language="javascript">
-		function whatsThisToggle(i) {
-		var e = document.getElementById(i);
- 		var t = e.className;
- 		if (t.match('invisible')) { t = t.replace(/invisible/gi, 'visible'); }
- 		else { t = t.replace(/visible/gi, 'invisible'); }
- 		e.className = t;
-		}
-		 		
- 		function amountCheck() {
- 			var a = document.getElementById("amount");
- 			var b = document.getElementById("bugzilla"); 
- 			if (a.value >=35)
- 			{
- 				b.removeAttribute("disabled");
- 			}
- 			else {
- 				b.setAttribute("disabled", "");
- 			}
- 		}
- 		function validateForm() {
- 			var fn = document.getElementById("first_name");
- 			var ln = document.getElementById("last_name");
- 			var a = document.getElementById("amount");
- 			var b = document.getElementById("bugzilla");
- 			var v = document.getElementById("verify");
- 
- 			if (fn.value.length == 0)
- 			{
- 				alert("Please specify a first name.");
- 				return false;
- 			}
- 			if (ln.value.length == 0)
- 			{
- 				alert("Please specify a last name.");
- 				return false;
- 			}
- 			if (a.value <= 0)
- 			{
- 				alert("Amount must be greater then 0.");
- 				return false;
- 			}
- 			if (a.value.length == 0)
- 			{
- 				alert("Please specify an amount.");
- 				return false;
- 			}
- 			if (a.value >=35)
- 			{
-	 			if (v.innerHTML.length == 0 && b.value.length !=0)
-	 			{
-	 				alert("Please verify your bugzilla login to continue");
-	 				return false;
-	 			}
-	 			if (v.innerHTML != "Verified!")
-	 			{
-	 				alert ("Your Bugzilla Login is not correct.");
-	 				return false;
-	 			}
- 			}
- 		}
- 		
+
 	</script>
 	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 	<div id="midcolumn">
@@ -103,7 +43,7 @@
 		</div>
 		<div class="homeitem">
 		<h3>Donate Now</h3>
-				<form ACTION="https://www.sandbox.paypal.com/cgi-bin/webscr" METHOD="POST" name="donateForm" onsubmit="return validateForm();">
+				<form ACTION="https://www.sandbox.paypal.com/cgi-bin/webscr" METHOD="POST" name="donateForm">
 				<input type="hidden" name="business" value="nathan_1195237105_biz@eclipse.org">
 				<!--  <input type="hidden" name="business" value="lynn@eclipse.org">  
 				<input type="hidden" name="return" value="http://www.eclipse.org/friends/thankyou.php">
@@ -159,7 +99,7 @@
 						<tr>
 							<td><div class="required" style="display:inline;"> * Required</div></td>
 							<td>						
-								<input type="submit" value="Donate" /> <img src="images/paypal.gif" align="absbottom" alt="PayPal"></td>
+								<input type="button" value="Donate" onclick="verifyBugzillaLogin();"/> <img src="images/paypal.gif" align="absbottom" alt="PayPal"></td>
 						</tr>
 					</table>
 				</form>
