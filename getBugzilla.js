@@ -76,7 +76,14 @@ function validateForm() {
 
 function verifyBugzillaLogin()
 {
+	var v = document.getElementById('verify');
 	var bugzillaLogin = document.getElementById('bugzilla');
+	if (bugzillaLogin.value.length == 0)
+	{
+		v.innerHTML = "";
+		v.removeAttribute("class");
+		v.removeAttribute("style");
+	}
 	var url = "ajaxBugzilla.php?bugzillaLogin=" + bugzillaLogin.value;
 	ajaxObject.open("GET", url, true);
 	ajaxObject.onreadystatechange = updatePage;
