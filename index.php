@@ -20,6 +20,7 @@
 	include ("functions.php");		
 	ob_start();	
 	?>
+	<script type="text/javascript" src="getBugzilla.js"></script>
 	<script language="javascript">
 		function whatsThisToggle(i) {
 		var e = document.getElementById(i);
@@ -135,7 +136,8 @@
 							<td><input type="text" name="item_number" id="bugzilla" size="30" disabled></td>
 						</tr>
 						<tr>
-							<td colspan=2><br/></td>
+							<td colspan=2><a onclick="verifyBugzillaLogin();"  style="font-size:75%;cursor:pointer;"> Verify Bugzilla ID</a><br/><div id="verify"></div></td>
+
 						</tr>
 	
 						<tr>
