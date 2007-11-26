@@ -181,7 +181,7 @@
 						Visit <a href="http://dev.eclipse.org/site_login">http://dev.eclipse.org/site_login</a> to get access to the Friends of Eclipse Mirror</p>
 					<br/>		
 						<p><h2>Logo</h2>If you wish to link to the Friends of Eclipse Logo on your website or blog please use this code below<br/><br/><div align="middle"><img align="middle" src="images/friendslogo.jpg"/></div>
-						<br/><code>&lt;img src="http://www.eclipse.org/donate/images/friendslogo.jpg"/&gt;</code></p>
+						<br/><textarea><img src="http://www.eclipse.org/donate/images/friendslogo.jpg"/></textarea></p>
 					</div>
 				</div>
 				<? } ?>
