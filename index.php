@@ -45,6 +45,9 @@
  			var fn = document.getElementById("first_name");
  			var ln = document.getElementById("last_name");
  			var a = document.getElementById("amount");
+ 			var b = document.getElementById("bugzilla");
+ 			var v = document.getElementById("verify");
+ 
  			if (fn.value.length == 0)
  			{
  				alert("Please specify a first name.");
@@ -65,7 +68,16 @@
  				alert("Please specify an amount.");
  				return false;
  			}
- 			
+ 			if (v.value.length == 0 && b.value.length !=0)
+ 			{
+ 				alert("Please verify your bugzilla login to continue");
+ 				return false;
+ 			}
+ 			if (v.value != "Verified!" && a.value >= 35)
+ 			{
+ 				alert ("Your Bugzilla Login is not correct.");
+ 				return false;
+ 			}
  		}
  		
 	</script>

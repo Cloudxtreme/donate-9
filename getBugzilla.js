@@ -28,7 +28,7 @@ function updatePage()
     	if (response == "Verified!")
     	{
     		e.setAttribute("class", "green");
-    		b.setAttribute("style","border:2px solid #00FF00;");
+    		b.setAttribute("style","border:2px solid green;");
     	}
     	else {
     		e.setAttribute("class", "red");
