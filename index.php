@@ -35,10 +35,12 @@
  			var b = document.getElementById("bugzilla"); 
  			if (a.value >=35)
  			{
- 				b.removeAttribute("readonly");
+ 				b.removeAttribute("disabled");
+ 				b.setAttribute("style", "background-color:#EEE;");
  			}
  			else {
- 				b.setAttribute("readonly", "");
+ 				b.setAttribute("disabled", "");
+ 				b.removeAttribute("style", "background-color:#FFF");
  			}
  		}
  		function validateForm() {
