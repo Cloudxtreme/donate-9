@@ -85,7 +85,7 @@
 					$date = $friend->getDateJoined();			
 				?>
 				<tr class="donorRecord">
-					<td><?=$benefit;?></td>
+					<td width="25"><?=$benefit;?></td>
 					<td><b><?=$name;?></b><br/><?=$comment;?></td>
 					<td><?=$date;?></td>
 					<td align="right">$<?=$amount;?> USD</td>
