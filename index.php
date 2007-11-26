@@ -88,7 +88,7 @@
 						</tr>
 						<tr>
 							<td>Bugzilla Login: <div id="verify"></div></td>
-							<td><input type="text" name="item_number" id="bugzilla" size="30" readonly></td>
+							<td><input type="text" name="item_number" id="bugzilla" size="30" disabled></td>
 						</tr>
 						<tr>
 							<td>&nbsp;</td>
