@@ -30,6 +30,7 @@ function amountCheck() {
 	}
 }
 function validateForm() {
+	var retVal = true;	
 	var fn = document.getElementById("first_name");
 	var ln = document.getElementById("last_name");
 	var a = document.getElementById("amount");
@@ -39,36 +40,37 @@ function validateForm() {
  	if (fn.value.length == 0)
  	{
  		alert("Please specify a first name.");
-		return false;
+		retval = false;
 	}
 	if (ln.value.length == 0)
 	{
 		alert("Please specify a last name.");
-		return false;
+		retval = false;
 	}
 	if (a.value <= 0)
 	{
 		alert("Amount must be greater then 0.");
-		return false;
+		retval = false;
 	}
 	if (a.value.length == 0)
 	{
 		alert("Please specify an amount.");
-		return false;
+		retval = false;
 	}
 	if (a.value >=35)
 	{
 		if (v.innerHTML.length == 0 && b.value.length !=0)
 		{
 			alert("Please verify your bugzilla login to continue");
-			return false;
+			retval = false;
 		}
 		if (v.innerHTML != "Verified!")
 		{
 			alert ("Your Bugzilla Login is not correct.");
-			return false;
+			retval = false;
 		}
 	}
+	return retVal;
 }
  		
 
