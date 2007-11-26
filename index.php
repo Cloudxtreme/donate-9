@@ -54,11 +54,17 @@
  				alert("Please specify a last name.");
  				return false;
  			}
- 			if (a.value <= 0 || a.value.length == 0)
+ 			if (a.value <= 0)
+ 			{
+ 				alert("Amount must be greater then 0.");
+ 				return false;
+ 			}
+ 			if (a.value.length == 0)
  			{
  				alert("Please specify an amount.");
  				return false;
  			}
+ 			
  		}
  		
 	</script>
