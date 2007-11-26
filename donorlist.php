@@ -86,7 +86,7 @@
 				?>
 				<tr class="donorRecord">
 					<td width="25"><?=$benefit;?></td>
-					<td><b><?=$name;?></b><br/><?=$comment;?></td>
+					<td width="59%"><b><?=$name;?></b><br/><?=$comment;?></td>
 					<td><?=$date;?></td>
 					<td align="right">$<?=$amount;?> USD</td>
 				</tr>		
