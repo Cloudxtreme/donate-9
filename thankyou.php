@@ -160,14 +160,18 @@
 					<li>Amount: <?=$amount;?></li>
 					<li>Anonymity: <?=$anonymous;?></li>
 					<li>Comment: <?=$comment;?></li>
-
-				<li>View our <a href="donorlist.php">Donor List</a></li>
+				</ul>
+				<table>
+					<tr>
+						<td>View our <a href="donorlist.php">Donor List</a></td>
+				
 				<? if ($benefit == 1) { ?>
-				<li>For the Friends of Eclipse Login Page please visit: <a href="http://dev.eclipse.org/site_login">http://dev.eclipse.org/site_login</a>.  Provide your Bugzilla Login Credentials to proceed</li>
-				<li>If you wish to link to the Friends of Eclipse Logo on your website or blog please use this code below<br/>
-				<textarea rows="2" cols="60"><img src="http://www.eclipse.org/donate/images/friendslogo.jpg"></textarea></li>
-				</ul>				
+						<td>For the Friends of Eclipse Login Page please visit: <a href="http://dev.eclipse.org/site_login">http://dev.eclipse.org/site_login</a>.  Provide your Bugzilla Login Credentials to proceed</td>
+						<td>If you wish to link to the Friends of Eclipse Logo on your website or blog please use this code below<br/><img src="images/friendslogo.jpg"/>
+						<textarea rows="2" cols="20"><img src="http://www.eclipse.org/donate/images/friendslogo.jpg"></textarea></td>
 				<? } ?>
+					</tr>
+				</table>
 			</div>
 			
 			<?
