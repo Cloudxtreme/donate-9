@@ -132,11 +132,11 @@
 							</td>
 						</tr>
 						<tr>
-							<td>Bugzilla Login:</td>
+							<td>Bugzilla Login: <div id="verify"></div></td>
 							<td><input type="text" name="item_number" id="bugzilla" size="30" disabled></td>
 						</tr>
 						<tr>
-							<td><div id="verify"></div></td>
+							<td>&nbsp;</td>
 							<td align="right"><a onclick="verifyBugzillaLogin();"  style="font-size:75%;cursor:pointer;">Verify Bugzilla ID</a><br/></td>
 
 						</tr>

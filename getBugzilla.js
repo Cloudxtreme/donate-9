@@ -27,10 +27,12 @@ function updatePage()
     	response = ajaxObject.responseText;
     	if (response == "Verified!")
     	{
-    		b.setAttribute("style","border:2px solid green;");
+    		e.setAttribute("class", "green");
+    		b.setAttribute("style","border:2px solid #00FF00;");
     	}
     	else {
-    		b.setAttribute("style","border:2px solid red;");
+    		e.setAttribute("class", "red");
+    		b.setAttribute("style","border:2px solid #FF0000;");
     	}
     	e.innerHTML = response;
     }
