@@ -22,8 +22,16 @@ function verifyBugzillaLogin()
 function updatePage()
 {
 	var e = document.getElementById('verify');
+	var b = document.getElementById('bugzilla');
     if (ajaxObject.readyState == 4){
     	response = ajaxObject.responseText;
+    	if (response == "Verified!")
+    	{
+    		b.style = "border:1px solid green;";
+    	}
+    	else {
+    		b.style = "border:1px solid red;";
+    	}
     	e.innerHTML = response;
     }
 }

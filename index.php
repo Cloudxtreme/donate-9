@@ -136,7 +136,8 @@
 							<td><input type="text" name="item_number" id="bugzilla" size="30" disabled></td>
 						</tr>
 						<tr>
-							<td colspan=2><a onclick="verifyBugzillaLogin();"  style="font-size:75%;cursor:pointer;"> Verify Bugzilla ID</a><br/><div id="verify"></div></td>
+							<td><div id="verify"></div></td>
+							<td align="right"><a onclick="verifyBugzillaLogin();"  style="font-size:75%;cursor:pointer;">Verify Bugzilla ID</a><br/></td>
 
 						</tr>
 	
