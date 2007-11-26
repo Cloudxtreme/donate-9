@@ -74,9 +74,6 @@ function validateForm() {
 
 function verifyBugzillaLogin()
 {
-	var retval;
-	retval = validateForm();
-	if $retval
 	var bugzillaLogin = document.getElementById('bugzilla');
 	var url = "ajaxBugzilla.php?bugzillaLogin=" + bugzillaLogin.value;
 	ajaxObject.open("GET", url, true);
