@@ -57,9 +57,9 @@ function validateForm() {
 		alert("Please specify an amount.");
 		retval = false;
 	}
-	if (a.value >=35)
+	if (a.value >=35 && b.value.length !=0)
 	{
-		if (v.innerHTML.length == 0 && b.value.length !=0)
+		if (v.innerHTML.length == 0)
 		{
 			alert("Please verify your bugzilla login to continue");
 			retval = false;
