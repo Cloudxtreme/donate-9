@@ -73,7 +73,7 @@
  				alert("Please verify your bugzilla login to continue");
  				return false;
  			}
- 			if (v.value != "Verified!" && a.value >= 35)
+ 			if (v.innerHTML != "Verified!" && a.value >= 35)
  			{
  				alert ("Your Bugzilla Login is not correct.");
  				return false;
