@@ -35,10 +35,10 @@
  			var b = document.getElementById("bugzilla"); 
  			if (a.value >=35)
  			{
- 				b.removeAttribute("disabled");
+ 				b.removeAttribute("readonly");
  			}
  			else {
- 				b.setAttribute("disabled", "");
+ 				b.setAttribute("readonly", "");
  			}
  		}
  		function validateForm() {
