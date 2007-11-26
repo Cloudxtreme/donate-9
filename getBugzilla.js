@@ -91,14 +91,18 @@ function updatePage()
     if (ajaxObject.readyState == 4){
     	response = ajaxObject.responseText;
     	e.innerHTML = response;
-    	if (response == "Verified!")
-    	{
-    		e.setAttribute("class", "green");
-    		b.setAttribute("style","border:2px solid green;");
+    	if (response == "Verified!" || b.value.length == 0)
+   		{
+    		if (response == "Verified!") 
+			{
+				e.setAttribute("class", "green");
+				b.setAttribute("style","border:2px solid green;");
+			}
     		if (validateForm())
     			document.donateForm.submit();
 	    }
-    	else {
+    	else if (response == "Invalid") {
+    		
     		e.setAttribute("class", "red");
     		b.setAttribute("style","border:2px solid #FF0000;");
     		validateForm();
