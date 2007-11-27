@@ -54,6 +54,11 @@ function validateForm() {
 		alert("Amount must be greater then 0.");
 		return false;
 	}
+	if (isNumeric(a.value) == false)
+	{
+		alert("Amount must contain numbers only.");
+		return false;
+	}
 	if (a.value.length == 0)
 	{
 		alert("Please specify an amount.");
@@ -75,6 +80,25 @@ function validateForm() {
 	return retVal;
 }
  		
+ 		
+function isNumeric(input)
+{
+	var numbers = "01234567890.-";
+	var singleChar;
+	var retVal = true;
+	if (input.length > 0)
+	{
+		for (i = 0; i < input.length && retVal == true; i++)
+		{
+			singleChar = input.charAt(i);
+			if (numbers.indexOf(singleChar) == -1)
+			{
+				retVal = false;
+			}
+		}
+	}
+	return retVal;
+}
 
 function verifyBugzillaLogin()
 {
