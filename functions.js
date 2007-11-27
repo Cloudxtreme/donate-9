@@ -42,34 +42,34 @@ function validateForm() {
  	if (fn.value.length == 0)
  	{
  		alert("Please specify a first name.");
-		retval = false;
+		return false;
 	}
 	if (ln.value.length == 0)
 	{
 		alert("Please specify a last name.");
-		retval = false;
+		return false;
 	}
 	if (a.value <= 0)
 	{
 		alert("Amount must be greater then 0.");
-		retval = false;
+		return false;
 	}
 	if (a.value.length == 0)
 	{
 		alert("Please specify an amount.");
-		retval = false;
+		return false;
 	}
 	if (a.value >=35 && b.value.length !=0)
 	{
 		if (v.innerHTML.length == 0)
 		{
 			alert("Please verify your bugzilla login to continue");
-			retval = false;
+			return false;
 		}
 		if (v.innerHTML != "Verified!")
 		{
 			alert ("Your Bugzilla Login is not correct.");
-			retval = false;
+			return false;	
 		}
 	}
 	return retVal;
