@@ -95,7 +95,7 @@ function verifyBugzillaLogin()
 
 function updatePage()
 {
-	var e = document.getElementById('verify');
+	var v = document.getElementById('verify');
 	var b = document.getElementById('bugzilla');
     if (ajaxObject.readyState == 4){
     	response = ajaxObject.responseText;
@@ -103,16 +103,16 @@ function updatePage()
    		{
     		if (response == "Verified!") 
 			{
-				e.innerHTML = response;    	
-				e.setAttribute("class", "green");
+				v.innerHTML = response;    	
+				v.setAttribute("class", "green");
 				b.setAttribute("style","border:2px solid green;");
 			}
     		if (validateForm())
     			document.donateForm.submit();
 	    }
     	else {
-    		e.innerHTML = response;    	
-    		e.setAttribute("class", "red");
+    		v.innerHTML = response;    	
+    		v.setAttribute("class", "red");
     		b.setAttribute("style","border:2px solid #FF0000;");
     		validateForm();
     	}
