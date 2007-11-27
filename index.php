@@ -63,7 +63,7 @@
 						</tr>
 						<tr>
 							<td>Donation Amount<span class="required">*</span>:</td>
-							<td><input type="text" name="amount" id="amount" size=10 onkeyup="amountCheck();" onblur="amountCheck();">USD</td>
+							<td><input type="text" name="amount" id="amount" size=10 onkeyup="amountCheck();" onblur="amountCheck();">US$</td>
 						</tr>						
 						<tr>
 							<td>Message:</td>
@@ -101,7 +101,7 @@
 		<div class="homeitem">
 			<h3>Become a Friend of Eclipse</h3>
 
-			<p>Donate US$ 35 or more and you will be identified as a Friend of Eclipse. Benefits of Friends Include:
+			<p>Donate US$35 or more and you will be identified as a Friend of Eclipse. Benefits of Friends Include:
 				<ul class="paddedList">
 					<li><span class="friend">Friends of Eclipse Mirror Site</span>  - This will allow you to download new versions of Eclipse faster**.</li>
 					<li><span class="friend">"Friend of Eclipse" logo</span> </li>
