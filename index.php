@@ -101,7 +101,7 @@
 		<div class="homeitem">
 			<h3>Become a Friend of Eclipse</h3>
 
-			<p>Donate USD $35 USD or more and you will be identified as a Friend of Eclipse. Benefits of Friends Include:
+			<p>Donate US$ 35 or more and you will be identified as a Friend of Eclipse. Benefits of Friends Include:
 				<ul class="paddedList">
 					<li><span class="friend">Friends of Eclipse Mirror Site</span>  - This will allow you to download new versions of Eclipse faster**.</li>
 					<li><span class="friend">"Friend of Eclipse" logo</span> </li>
