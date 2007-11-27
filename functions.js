@@ -109,6 +109,7 @@ function verifyBugzillaLogin()
 	{
 		v.innerHTML = "";
 		v.removeAttribute("class");
+		bugzillaLogin.value = "";
 		bugzillaLogin.removeAttribute("style");
 	}
 	var url = "ajaxBugzilla.php?bugzillaLogin=" + bugzillaLogin.value;
