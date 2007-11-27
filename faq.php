@@ -32,7 +32,7 @@
 				
 				<li><b>What if I want to pay by cheque or direct deposit?</b><br/><br/>
 				At this time, we are only set up to accept contributions through credit cards and PayPal.  It is free to 
-				sign up for an account at www.paypal.com..<br/><br/></li>
+				sign up for an account at www.paypal.com.<br/><br/></li>
 				
 				<li><b>What is the difference between contributing money to Eclipse and becoming a Friend of Eclipse?</b><br/><br/>
 				Individuals can contribute any amount of money they want to the Eclipse Foundation.  However, those 
@@ -62,10 +62,10 @@
 				The Eclipse download site's performance varies from day to day, depending on new project releases. 
 				Although Friends' downloads get priority bandwidth, the Eclipse Foundation will add bandwidth as 
 				required to ensure an adequate level of performance from our main download site.<br/><br/></li>
-				<li><b>How do I get access the the Friends of Eclipse mirror?</b><br/><br/>
+				<li><b>How do I get access to the Friends of Eclipse mirror?</b><br/><br/>
 				Everyone that donates US$35 or more to the Eclipse Foundation will automatically be flagged as a 
 				Friend of Eclipse.  This gives them access to the Friends of Eclipse Mirror for 12 months.   
-				When you register you donation, you will be asked to enter your Bugzilla Login ID.  This will be used 
+				When you register your donation, you will be asked to enter your Bugzilla Login ID.  This will be used 
 				to login to the Friends of Eclipse Mirror.<br/><br/></li>
 				
 				<li><b>Who can use the Friend of Eclipse Logo?</b><br/><br/>
