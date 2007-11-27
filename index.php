@@ -20,10 +20,7 @@
 	include ("functions.php");		
 	ob_start();	
 	?>
-	<script type="text/javascript" src="getBugzilla.js"></script>
-	<script language="javascript">
-
-	</script>
+	<script type="text/javascript" src="functions.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 	<div id="midcolumn">
 		<h1><?=$pageTitle ?></h1>
@@ -88,7 +85,7 @@
 						</tr>
 						<tr>
 							<td>Bugzilla Login: <div id="verify"></div></td>
-							<td><input type="text" name="item_number" id="bugzilla" size="30" disabled></td>
+							<td><input class="disabled" type="text" name="item_number" id="bugzilla" size="30" disabled></td>
 						</tr>
 						<tr>
 							<td colspan="2"><br/></td>

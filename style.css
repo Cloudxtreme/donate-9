@@ -69,6 +69,14 @@
 	display:inline;
 }
 
+.disabled{
+	background-color:#eee;	
+}
+.enabled {
+	background-color:none;
+}
+
+
 .more {
 	font-size:75%;
 	text-align:right;
