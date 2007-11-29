@@ -24,11 +24,12 @@
 		<div class="homeitem3col">
 			<h3>Frequently Asked Questions</h3>
 			<ul>
-				<br/><li><b>Are my contributions tax-deductible?</b><br/><br/>
-				No, contributions are not tax-deductible.  The Eclipse Foundation is a not-for-profit organization, 
-				not a charitable organization, so we are unable to provide tax receipts.<br/><br/></li>
+				<br/><li><b>Do I get a charitable tax receipt for my donation? </b><br/><br/>
+				No.  The Eclipse Foundation is a not-for-profit organization, 
+				not a charitable organization, so we are unable to provide charitable tax receipts.<br/><br/></li>
+				
 				<li><b>What methods of payment do you accept for contributions?</b><br/><br/>
-				You may make a donation with your credit card or through your PayPal account.<br/><br/></li>
+				We are using PayPal to process your donation.   PayPal enables you to use a credit card or a PayPal account.<br/><br/></li>
 				
 				<li><b>What if I want to pay by cheque or direct deposit?</b><br/><br/>
 				At this time, we are only set up to accept contributions through credit cards and PayPal.  It is free to 
@@ -36,8 +37,8 @@
 				
 				<li><b>What is the difference between contributing money to Eclipse and becoming a Friend of Eclipse?</b><br/><br/>
 				Individuals can contribute any amount of money they want to the Eclipse Foundation.  However, those 
-				that give US$35 or more qualify for "Friends" status.  "Friends" status lasts for a period of 12 
-				months and provides access to a Friends of Eclipse mirror and use of the "Friends" logo.<br/><br/></li>
+				that give US$35 or more qualify for "Friend" status.  "Friend" status lasts for a period of 12 
+				months and provides access to a Friends of Eclipse mirror and use of the "Friend" logo.<br/><br/></li>
 				
 				<li><b>What amounts may I contribute?</b><br/><br/>
 				You may contribute any amount you like. If you contribute US$35 or more, you also qualify for the 
