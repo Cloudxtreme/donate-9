@@ -21,14 +21,13 @@
 
 	 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/classes/friends/friend.class.php");
 	 require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/classes/friends/contribution.class.php");
-	
+	 require_once($_SERVER['DOCUMENT_ROOT'] . "/donate/authcode.php");
+	 
 	ob_start();	
 	// read the post from PayPal system and add 'cmd'
 	$req = 'cmd=_notify-synch';
 	
 	$tx_token = $_GET['tx'];
-	//$auth_token = "IwvbOjr-0QFrWwQ-v4npMGcesdQ2JHq90pjTQQdIc2D1SuJ1VHUwTUFXINu"; // Live
-	$auth_token = "83cDSIxlE-KGhQsTKd93YAY79iVD7RjNMyl71n3FY4LvRYAiPRdcVs6Ash0"; // Sandbox
 	$req .= "&tx=$tx_token&at=$auth_token";
 	
 	
@@ -36,7 +35,7 @@
 	$header .= "POST /cgi-bin/webscr HTTP/1.0\r\n";
 	$header .= "Content-Type: application/x-www-form-urlencoded\r\n";
 	$header .= "Content-Length: " . strlen($req) . "\r\n\r\n";
-	$fp = fsockopen ('www.sandbox.paypal.com', 80, $errno, $errstr, 30);
+	$fp = fsockopen ('www.paypal.com', 80, $errno, $errstr, 30);
 	// If possible, securely post back to paypal using HTTPS
 	// Your PHP server will need to be SSL enabled
 	// $fp = fsockopen ('ssl://www.paypal.com', 443, $errno, $errstr, 30);
