@@ -41,7 +41,6 @@
 		<div class="homeitem">
 		<h3>Donate Now</h3>
 				<form ACTION="https://www.paypal.com/cgi-bin/webscr" METHOD="POST" name="donateForm">
-				<!-- <input type="hidden" name="business" value="nathan_1195237105_biz@eclipse.org"> -->
 				<input type="hidden" name="business" value="lynn@eclipse.org">  
 				<input type="hidden" name="item_name" value="Donation">
 				<input type="hidden" name="no_shipping" value="1">
