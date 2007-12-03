@@ -28,7 +28,7 @@
 		<div >
 			<!-- <p>Financially contribute to the Eclipse Foundation and help support the vibrant Eclipse ecosystem and open source community.</p> -->
 
-			<p>Donations will be used to help the Eclipse Foundation provide services for the Eclipse community, such as*: 
+			<p><a href="./faq.php">Donations</a> will be used to help the Eclipse Foundation provide services for the Eclipse community, such as*: 
 				<ul class="paddedList">
 					<li>Providing more bandwidth for users and committers</li> 
 					<li>Purchasing additional servers to host Eclipse projects</li> 
@@ -36,7 +36,8 @@
 					<li>Sponsoring Eclipse community events</li>
 				</ul>
 			</p>
-			<p>Feel free to donate any amount you like.  We have made it easy to use a credit card through <img src="images/paypal.gif" align="absbottom" alt="PayPal">.</p>  
+			<p>Feel free to donate any amount you like.  We have made it easy to use a credit card through <img src="images/paypal.gif" align="absbottom" alt="PayPal">.
+			Please note, the Eclipse Foundation is a not-for-profit organization, not a charitable organization, so we are unable to provide charitable tax receipts.</p>  
 		</div>
 		<div class="homeitem">
 		<h3>Donate Now</h3>
@@ -98,7 +99,7 @@
 		<div class="homeitem">
 			<h3>Become a Friend of Eclipse</h3>
 
-			<p>Donate US$35, $42, $50 or more and you will be identified as a Friend of Eclipse. Benefits of Friends Include:
+			<p>Donate US$35 or more and you will be identified as a Friend of Eclipse. Benefits of Friends Include:
 				<ul class="paddedList">
 					<li><span class="friend">Friends of Eclipse Mirror Site</span>  - This will allow you to download new versions of Eclipse faster**.</li>
 					<li><span class="friend">"Friend of Eclipse" logo</span> </li>
