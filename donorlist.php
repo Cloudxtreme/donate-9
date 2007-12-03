@@ -22,7 +22,7 @@
 	require_once("functions.php");
 	ob_start();	
 	$start = $_GET['start'];
-	$pageValue = 10;
+	$pageValue = 25;
 	if (!$start)
 		$start = 0;
 	$totalContributionCount = new FriendsContributionsList();
