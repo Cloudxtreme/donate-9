@@ -97,7 +97,7 @@
 		<br/><br/>				
 	</div>
 	<div id="rightcolumn">
-		<div align="middle">
+		<div align="middle"><br/><br/>
 			<a href="/donate/"><img src="/donate/images/donate.jpg" alt="Donate to Eclipse"/></a>
 		</div>
 		<div class="sideitem">
