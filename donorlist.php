@@ -98,6 +98,7 @@
 	</div>
 	<div id="rightcolumn">
 		<div class="sideitem">
+		<a href="/donate/"><img src="/donate/images/donate.jpg" alt="Donate to Eclipse"/></a>
 		<h6>Related Links</h6>
 			<ul>
 				<li><a href="index.php">Donate to Eclipse</a></li>
