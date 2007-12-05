@@ -17,6 +17,7 @@
 	$pageTitle 		= "Donor List";
 	$pageKeywords	= "friends of eclipse, donation, contribution";
 	$pageAuthor		= "Nathan Gervais";
+	header("Cache-control: no-cache");
 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/smartconnection.class.php");
 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/classes/friends/friendsContributionsList.class.php");
 	require_once("functions.php");
