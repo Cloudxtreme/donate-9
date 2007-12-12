@@ -101,6 +101,10 @@
 			<a href="/donate/"><img src="/donate/images/donate.jpg" alt="Donate to Eclipse"/></a>
 		</div>
 		<div class="sideitem">
+			<h6>Donations Receieved</h6>
+			<h1><?=$pageCount;?></h1>
+		</div>
+		<div class="sideitem">
 		
 		<h6>Related Links</h6>
 			<ul>
