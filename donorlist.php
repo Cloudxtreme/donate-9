@@ -34,6 +34,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 	<div id="midcolumn">
 		<h1><?=$pageTitle;?></h1>
+		<h3><?=$pageTotal;?> Donations</h3>
 		<?=displayPager($start, $pageValue, $pageCount);?>
 		<table class="donorList" cellspacing=0>
 			<tr class="donorHeader">
