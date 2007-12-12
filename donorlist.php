@@ -102,7 +102,7 @@
 		</div>
 		<div class="sideitem">
 			<h6>Donations Receieved</h6>
-			<h1><?=$pageCount;?></h1>
+			<div align="center" style="font-size:24px;"><?=$pageCount;?></div>
 		</div>
 		<div class="sideitem">
 		
