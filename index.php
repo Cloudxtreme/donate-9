@@ -14,7 +14,7 @@
 	
 	#
 	# Begin: page-specific settings.  Change these. 
-	$pageTitle 		= "Donate to Eclipse";
+	$pageTitle 		= "Friends of Eclipse";
 	$pageKeywords	= "friends of eclipse, donation, contribution";
 	$pageAuthor		= "Nathan Gervais";
 	include ("functions.php");		
@@ -28,7 +28,7 @@
 		<div >
 			<!-- <p>Financially contribute to the Eclipse Foundation and help support the vibrant Eclipse ecosystem and open source community.</p> -->
 
-			<p><a href="./faq.php">Donations</a> will be used to help the Eclipse Foundation provide services for the Eclipse community, such as*: 
+			<p><a href="./faq.php">Become a Friend of Eclipse</a> and help the Eclipse Foundation provide services for the Eclipse community, such as*: 
 				<ul class="paddedList">
 					<li>Providing more bandwidth for users and committers</li> 
 					<li>Purchasing additional servers to host Eclipse projects</li> 
@@ -36,11 +36,11 @@
 					<li>Sponsoring Eclipse community events</li>
 				</ul>
 			</p>
-			<p>Feel free to donate any amount you like.  We have made it easy to use a credit card through <img src="images/paypal.gif" align="absbottom" alt="PayPal">.
+			<p>Feel free to donate any amount you like.  Donations of $35 or more will receive special Friends of Eclipse benefits.  We have made it easy to use a credit card through <img src="images/paypal.gif" align="absbottom" alt="PayPal">.
 			Please note, the Eclipse Foundation is a not-for-profit organization, not a charitable organization, so we are unable to provide charitable tax receipts.</p>  
 		</div>
 		<div class="homeitem">
-		<h3>Donate Now</h3>
+		<h3>Join Now</h3>
 				<form ACTION="https://www.paypal.com/cgi-bin/webscr" METHOD="POST" name="donateForm">
 				<input type="hidden" name="business" value="lynn@eclipse.org">  
 				<input type="hidden" name="item_name" value="Donation">
@@ -117,7 +117,7 @@
 		<div class="sideitem">
 		<h6>Related Links</h6>
 			<ul>
-				<li><a href="faq.php">Donation FAQ</a></li>
+				<li><a href="faq.php">FAQ</a></li>
 				<li><a href="http://dev.eclipse.org/site_login">Friends of Eclipse Login</a></li>				
 			</ul>
 		</div>	

@@ -14,7 +14,7 @@
 	
 	#
 	# Begin: page-specific settings.  Change these. 
-	$pageTitle 		= "Donate to Eclipse FAQ";
+	$pageTitle 		= "Friends of Eclipse FAQ";
 	$pageKeywords	= "friends of eclipse, donation, faq";
 	$pageAuthor		= "Nathan Gervais";
 	ob_start();
@@ -80,7 +80,7 @@
 		<div class="sideitem">
 		<h6>Related Links</h6>
 			<ul>
-				<li><a href="index.php">Donate to Eclipse</a></li>
+				<li><a href="index.php">Friends of Eclipse</a></li>
 				<li><a href="donorlist.php">Public List of Donors</a></li>
 			</ul>
 		</div>
