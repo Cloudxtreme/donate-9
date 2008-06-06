@@ -28,7 +28,7 @@
 	$dbc = new DBConnectionRW();
 	$dbh = $dbc->connect();
 
-	if (isset($id))
+	if (isset($id) && ($id != ""))
 	{
 		$query = "DELETE FROM ganymede_spots WHERE id = $id";
 		echo $query;
