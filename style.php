@@ -31,7 +31,7 @@
 	if (isset($id) && ($id != ""))
 	{
 		$query = "DELETE FROM ganymede_spots WHERE id = $id";
-		echo $query;
+		mysql_query ($query);		
 	}
 	# Generate the web page
 	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
