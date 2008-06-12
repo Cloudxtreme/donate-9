@@ -1,4 +1,4 @@
-<?php  	error_reporting(E_ALL);																													require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());    # All on the same line to unclutter the user's desktop'
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());    # All on the same line to unclutter the user's desktop'
 
 	#*****************************************************************************
 	#
@@ -170,7 +170,7 @@
 					<li>Anonymity: <?=$anonymous;?></li>
 					<li>Comment: <?=$comment;?></li>
 				</ul>
-				<br/><br/><div align="middle"><b style="font-size:120%">View our <a href="donorlist.php">Donor List</a></b></div>
+				<br/><br/><div align="middle"><b style="font-size:120%">View our <a href="http://www.eclipse.org/donate/donorlist.php">Donor List</a></b></div>
 				</div>
 				<? if ($benefit == 1) { ?>
 				<div class="homeitem">
@@ -182,15 +182,15 @@
 						<p><h2>Logo</h2>If you wish to link to the Friends of Eclipse Logo on your website or blog please use of the codes below</p>
 						<table width="100%">
 							<tr>
-								<td><img src="images/friendslogo.jpg"/></td>
+								<td><img src="http://www.eclipse.org/donate/images/friendslogo.jpg"/></td>
 								<td align="right"><textarea><img src="http://www.eclipse.org/donate/images/friendslogo.jpg"/></textarea></td>
 							</tr>
 							<tr>
-								<td><img src="images/friendslogo200.jpg"></td>
+								<td><img src="http://www.eclipse.org/donate/images/friendslogo200.jpg"></td>
 								<td align="right"><textarea><img src="http://www.eclipse.org/donate/images/friendslogo200.jpg"></textarea></td>
 							</tr>
 							<tr>
-								<td><img src="images/friendslogo160.jpg"></td>
+								<td><img src="http://www.eclipse.org/donate/images/friendslogo160.jpg"></td>
 								<td align="right"><textarea><img src="http://www.eclipse.org/donate/images/friendslogo160.jpg"></textarea></td>
 							</tr>
 						</table>
@@ -198,9 +198,7 @@
 				</div>
 				<? } ?>
 				<div class="clearer"></div>
-				
 			</div>
-			
 			<?
 		}
 		else if (strcmp ($lines[0], "FAIL") == 0) {
