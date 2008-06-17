@@ -72,12 +72,12 @@
 							<td><input type="radio" id="os1" name="os1" value="Public" checked="checked">List My Name<br/><input type="radio" id="os1" name="os1" value="Anonymous">List Anonymously</td>
 						</tr>
 						<tr>
-							<td colspan=2><br/><b>Friend Of Eclipse Login</b> <a style="font-size:75%;cursor:pointer;" onClick="whatsThisToggle('WhatsThis');">(What's This For?)</a></td>
+							<td colspan=2><br/><b>Friend Of Eclipse Login</b></td>
 						</tr>
 						<tr>
 							<td colspan=2>
-								<div id="WhatsThis" class="invisible">
-									When you donate US$35 or more you will have access to the Friends of Eclipse Mirror Site. Your Bugzilla Login is used to give you access to this mirror. 
+								<div id="WhatsThis">
+									When you donate US$35 or more you will have access to the Friends of Eclipse Mirror Site. You will need a Bugzilla Login is used to give you access to this mirror. If you need a Bugzilla ID <a href="https://bugs.eclipse.org/bugs/createaccount.cgi">click here</a> to launch the registration page in new window. 
 								</div>
 							</td>
 						</tr>
