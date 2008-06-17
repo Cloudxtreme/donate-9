@@ -77,7 +77,7 @@
 						<tr>
 							<td colspan=2>
 								<div id="WhatsThis">
-									When you donate US$35 or more you will have access to the Friends of Eclipse Mirror Site. You will need a Bugzilla Login to give you access to this mirror. If you need a Bugzilla ID <a href="https://bugs.eclipse.org/bugs/createaccount.cgi">click here</a> to launch the registration page in new window. 
+									When you donate US$35 or more you will have access to the Friends of Eclipse Mirror Site. You will need a Bugzilla Login to give you access to this mirror. If you need a Bugzilla ID <a href="https://bugs.eclipse.org/bugs/createaccount.cgi" target="_blank">click here</a> to launch the registration page in new window. 
 								</div>
 							</td>
 						</tr>
