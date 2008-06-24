@@ -24,7 +24,7 @@
 	
 	$email = $App->getHTTPParameter('email', 'POST');
 	$transactionID = $App->getHTTPParameter('transactionid', 'POST');
-	
+	var_dump ($transactionID);
 	
 	$contribution = new Contribution();
 	$contribution->selectContributionExists($transactionID);
@@ -33,8 +33,6 @@
 	$bugzillaID = $friend->getBugzillaIDFromEmail($email);
 	$amount = $contribution->getAmount();
 	
-	var_dump($contribution);
-	var_dump($friend);
 	?>
 	<script type="text/javascript" src="functions.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
