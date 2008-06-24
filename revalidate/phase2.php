@@ -30,8 +30,11 @@
 	$contribution->selectContributionExists($transactionID);
 	$friend = new Friend();
 	$friend->selectFriend($contribution->getFriendID());
-	$bugzillaID = $friend->getBugzillaIDFromEmail('email');
+	$bugzillaID = $friend->getBugzillaIDFromEmail($email);
 	$amount = $contribution->getAmount();
+	
+	var_dump($contribution);
+	var_dump($friend);
 	?>
 	<script type="text/javascript" src="functions.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />

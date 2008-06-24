@@ -24,7 +24,7 @@
 	<div id="midcolumn">
 		<h1><?=$pageTitle;?></h1>
 		<p>This page is used to revalidate an account for Friends Privledges.</p>							
-		<form action="phase2.php">
+		<form action="phase2.php" method="post">
 			<table>
 				<tr>
 					<td>Email Address:</td>
