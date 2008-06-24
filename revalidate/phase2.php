@@ -27,7 +27,8 @@
 	var_dump ($transactionID);
 	
 	$contribution = new Contribution();
-	$contribution->selectContributionExists($transactionID);
+	$checkTrans = $contribution->selectContributionExists($transactionID);
+	var_dump($checkTrans);
 	$friend = new Friend();
 	$friend->selectFriend($contribution->getFriendID());
 	$bugzillaID = $friend->getBugzillaIDFromEmail($email);
