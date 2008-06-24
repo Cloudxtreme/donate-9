@@ -17,7 +17,6 @@
 	$pageTitle 		= "Friends of Eclipse";
 	$pageKeywords	= "friends of eclipse, donation, contribution";
 	$pageAuthor		= "Nathan Gervais";
-	include ("functions.php");		
 	ob_start();	
 	?>
 	<script type="text/javascript" src="functions.js"></script>

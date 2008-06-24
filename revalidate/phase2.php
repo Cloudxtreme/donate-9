@@ -22,8 +22,8 @@
 	
 	ob_start();	
 	
-	$email = $App->getHTTPParameter('email', 'GET');
-	$transactionID = $App->getHTTPParameter('transactionid', 'GET');
+	$email = $App->getHTTPParameter('email', 'POST');
+	$transactionID = $App->getHTTPParameter('transactionid', 'POST');
 	
 	
 	$contribution = new Contribution();
