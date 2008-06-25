@@ -38,8 +38,8 @@
 	if ($amount >= 35)
 	{
 		$friend->setBugzillaID($bugzillaID);
-		$SQL = "UPDATE FRIENDS set bugzilla_id = $bugzillaID WHERE friend_id = ". $friend->getFriendID();
-		//$result = mysql_query($SQL);
+		$SQL = "UPDATE friends SET bugzilla_id = $bugzillaID WHERE friend_id = ". $friend->getFriendID();
+		$result = mysql_query($SQL);
 		
 		echo "Friend Updated";
 	}
