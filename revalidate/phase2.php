@@ -35,7 +35,7 @@
 	$bugzillaID = $friend->getBugzillaIDFromEmail($email);
 	$amount = $rr->amount;
 	
-	if ($amount > 35)
+	if ($amount >= 35)
 	{
 		var_dump($friend);
 	}
