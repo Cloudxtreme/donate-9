@@ -35,14 +35,12 @@
 	$bugzillaID = $friend->getBugzillaIDFromEmail($email);
 	$amount = $rr->amount;
 	
-	var_dump($friend);
 	if ($amount >= 35)
 	{
 		$friend->setBugzillaID($bugzillaID);
-			var_dump($friend);
 		$SQL = "UPDATE FRIENDS set bugzilla_id = $bugzillaID WHERE friend_id = ". $friend->getFriendID();
 		echo $SQL;
-		//$result = mysql_query()
+		$result = mysql_query($SQL);
 		
 		echo "Friend Updated";
 	}
