@@ -28,7 +28,7 @@
 	$transactionID = $App->getHTTPParameter('transactionid', 'POST');
 	
 	$contribution = new Contribution();
-	$result = $dbconnect->query("SELECT * FROM friends_contributions WHERE transaction_id = '$transactionID'") or die(mysql_error());
+	$result = mysql_query("SELECT * FROM friends_contributions WHERE transaction_id = '$transactionID'") or die(mysql_error());
 	$rr = mysql_fetch_array($result);
 	
 	$friend = new Friend();
