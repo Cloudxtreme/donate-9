@@ -37,7 +37,9 @@
 	
 	if ($amount >= 35)
 	{
-		var_dump($friend);
+		$friend->setBugzillaID($bugzillaID);
+		$friend->insertUpdateFriend();
+		echo "Friend Updated";
 	}
 	?>
 	<script type="text/javascript" src="functions.js"></script>
@@ -45,7 +47,7 @@
 	<div id="midcolumn">
 		<h1><?=$pageTitle;?></h1>
 		<p>This page is used to revalidate an account for Friends Priviledges.</p>							
-		<form action="phase2.php">
+		<form action="phase3.php">
 			<table>
 				<tr>
 					<td>Bugzilla ID:</td>
