@@ -28,13 +28,13 @@
 	$transactionID = $App->getHTTPParameter('transactionid', 'POST');
 	
 	$result = mysql_query("SELECT * FROM friends_contributions WHERE transaction_id = '$transactionID'") or die(mysql_error());
-	$rr = mysql_fetch_object($result);
+	$rr = mysql_num_rows($result);
 	
 	$friend = new Friend();
 	$friend->selectFriend($rr->friend_id);
 	$bugzillaID = $friend->getBugzillaIDFromEmail($email);
 	$amount = $rr->amount;
-	echo "<pre>" . var_dump($result) . "</pre>";
+	echo "<pre>" . var_dump($rr) . "</pre>";
 	?>
 	<script type="text/javascript" src="functions.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
