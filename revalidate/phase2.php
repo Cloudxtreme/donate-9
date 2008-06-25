@@ -39,7 +39,8 @@
 	if ($amount >= 35)
 	{
 		$friend->setBugzillaID($bugzillaID);
-		//$friend->insertUpdateFriend();
+			var_dump($friend);
+		$friend->insertUpdateFriend();
 		
 		echo "Friend Updated";
 	}
