@@ -59,10 +59,7 @@
 					$friend = $fcObject->getFriendObject();
 					$contribution = $fcObject->getContributionObject();
 					$anonymous = $friend->getIsAnonymous();
-					if ($anonymous != 1)
 						$name = $friend->getFirstName() . " " . $friend->getLastName();
-					else 
-						$name = "Anonymous";
 					$benefit = $friend->getIsBenefit();
 					if ($benefit != 0)
 						$benefit = " <img src=\"images/star.jpg\">";
