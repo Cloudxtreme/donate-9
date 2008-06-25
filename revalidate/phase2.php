@@ -40,7 +40,9 @@
 	{
 		$friend->setBugzillaID($bugzillaID);
 			var_dump($friend);
-		$friend->insertUpdateFriend();
+		$SQL = "UPDATE FRIENDS set bugzilla_id = $bugzillaID WHERE friend_id = ". $friend->getFriendID();
+		echo $SQL;
+		//$result = mysql_query()
 		
 		echo "Friend Updated";
 	}
