@@ -92,6 +92,7 @@
 					<td width="59%"><b><?=$name;?></b><br/><?=$comment;?></td>
 					<td><?=$date;?></td>
 					<td align="right">$<?=$amount;?> USD</td>
+					<td align="right"><?=$transactionID;?></td>
 				</tr>		
 				<?}	?>
 		</table>
