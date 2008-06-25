@@ -27,12 +27,13 @@
 	var_dump ($transactionID);
 	
 	$contribution = new Contribution();
-	$checkTrans = $contribution->selectContributionExists($transactionID);
-	var_dump($checkTrans);
+	$result = mysql_query("SELECT * FROM friends_contributions WHERE transaction_id = '$transactionID'");
+	$rr = mysql_fetch_array($result);
+	
 	$friend = new Friend();
-	$friend->selectFriend($contribution->getFriendID());
+	$friend->selectFriend($rr['friend_id']);
 	$bugzillaID = $friend->getBugzillaIDFromEmail($email);
-	$amount = $contribution->getAmount();
+	$amount = $rr['amount'];
 	
 	?>
 	<script type="text/javascript" src="functions.js"></script>
