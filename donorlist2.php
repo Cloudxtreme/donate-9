@@ -56,9 +56,10 @@
 				{
 					$fcObject = $friendsContributionsList->getItemAt($i);
 					$friend = $fcObject->getFriendObject();
+					$bugzillaID = $friend->getBugzillaID();
 					$contribution = $fcObject->getContributionObject();
 					$anonymous = $friend->getIsAnonymous();
-					$name = $friend->getFirstName() . " " . $friend->getLastName();
+					$name = $friend->getFirstName() . " " . $friend->getLastName() . "(" . $bugzillaID . ")";
 					$benefit = $friend->getIsBenefit();
 					if ($benefit != 0)
 						$benefit = " <img src=\"images/star.jpg\">";
