@@ -34,7 +34,7 @@
 	$friend->selectFriend($rr->friend_id);
 	$bugzillaID = $friend->getBugzillaIDFromEmail($email);
 	$amount = $rr->amount;
-	echo "<pre>" . var_dump($rr) . "</pre>";
+	echo "<pre>" . var_dump($result) . "</pre>";
 	?>
 	<script type="text/javascript" src="functions.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
