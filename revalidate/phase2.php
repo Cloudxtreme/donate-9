@@ -19,14 +19,16 @@
 	$pageAuthor		= "Nathan Gervais";
 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/classes/friends/friend.class.php");
 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/classes/friends/contribution.class.php");
-	
+	require_once("/home/data/httpd/eclipse-php-classes/system/dbconnection_rw.class.php");
+	$dbc = new DBConnectionRW();
+	$dbh = $dbc->connect();
 	ob_start();	
 	
 	$email = $App->getHTTPParameter('email', 'POST');
 	$transactionID = $App->getHTTPParameter('transactionid', 'POST');
 	
 	$contribution = new Contribution();
-	$result = mysql_query("SELECT * FROM friends_contributions WHERE transaction_id = '$transactionID'") or die(mysql_error());
+	$result = $dbconnect->query("SELECT * FROM friends_contributions WHERE transaction_id = '$transactionID'") or die(mysql_error());
 	$rr = mysql_fetch_array($result);
 	
 	$friend = new Friend();
@@ -39,7 +41,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 	<div id="midcolumn">
 		<h1><?=$pageTitle;?></h1>
-		<p>This page is used to revalidate an account for Friends Privledges.</p>							
+		<p>This page is used to revalidate an account for Friends Priviledges.</p>							
 		<form action="phase2.php">
 			<table>
 				<tr>
