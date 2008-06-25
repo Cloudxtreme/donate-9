@@ -35,10 +35,12 @@
 	$bugzillaID = $friend->getBugzillaIDFromEmail($email);
 	$amount = $rr->amount;
 	
+	var_dump($friend);
 	if ($amount >= 35)
 	{
 		$friend->setBugzillaID($bugzillaID);
-		$friend->insertUpdateFriend();
+		//$friend->insertUpdateFriend();
+		
 		echo "Friend Updated";
 	}
 	?>
