@@ -83,7 +83,7 @@ function validateForm() {
 			return false;
 		}
 	}
-	return reVal;
+	return retVal;
 }
  		
  		
