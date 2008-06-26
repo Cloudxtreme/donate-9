@@ -131,9 +131,10 @@ function updatePage()
 {
 	var v = document.getElementById('verify');
 	var b = document.getElementById('bugzilla');
+	var anon = document.getElementById('os1');
     if (ajaxObject.readyState == 4){
     	response = ajaxObject.responseText;
-    	if (response == "Verified!" || b.value.length == 0)
+    	if (response == "Verified!" || b.value.length == 0 || anon.checked == false)
    		{
     		if (response == "Verified!") 
 			{
