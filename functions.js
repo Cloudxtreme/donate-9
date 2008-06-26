@@ -69,17 +69,17 @@ function validateForm() {
 		if (b.value.length !=0)	{
 			if (anon.value == "Public")	{
 				if (v.innerHTML.length == 0) {
-					alert("Please verify your bugzilla login to continue");
+					alert("Please verify your Bugzilla Login to continue");
 					return false;
 				}
 				if (v.innerHTML != "Verified!") {
-					alert ("Your Bugzilla Login is not correct.");
+					alert ("For donations of $35 dollars or more we require you to provide your Bugzilla ID.  If you do not wish to provide your Bugzilla ID please list your name Anonymously.");
 					return false;	
 				}
 			}
 		}
 		else {
-			alert("For donations of $35 dollars or more we require you to provide your Bugzilla ID.  If you do not wish to provide your Bugzilla ID please list your name Anonymously");
+			alert("For donations of $35 dollars or more we require you to provide your Bugzilla ID.  If you do not wish to provide your Bugzilla ID please list your name Anonymously.");
 			return false;
 		}
 	}
