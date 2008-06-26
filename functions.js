@@ -65,23 +65,25 @@ function validateForm() {
 		alert("Please specify an amount.");
 		return false;
 	}
-	if (a.value >=35 && b.value.length !=0)
-	{
-		if (anon.value == "Public")
-		{
-			if (v.innerHTML.length == 0)
-			{
-				alert("Please verify your bugzilla login to continue");
-				return false;
-			}
-			if (v.innerHTML != "Verified!")
-			{
-				alert ("Your Bugzilla Login is not correct.");
-				return false;	
+	if (a.value >=35) {
+		if (b.value.length !=0)	{
+			if (anon.value == "Public")	{
+				if (v.innerHTML.length == 0) {
+					alert("Please verify your bugzilla login to continue");
+					return false;
+				}
+				if (v.innerHTML != "Verified!") {
+					alert ("Your Bugzilla Login is not correct.");
+					return false;	
+				}
 			}
 		}
+		else {
+			alert("For donations of $35 dollars or more we require you to provide your Bugzilla ID.  If you do not wish to provide your Bugzilla ID please list your name Anonymously");
+			return false;
+		}
 	}
-	return retVal;
+	return reVal;
 }
  		
  		
