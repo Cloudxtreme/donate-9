@@ -73,7 +73,7 @@ function validateForm() {
 					return false;
 				}
 				if (v.innerHTML != "Verified!") {
-					alert ("Your Bugzilla ID could not be verified. For donations of $35 dollars or more we require you to provide a valid Bugzilla ID.  If you do not wish to provide your Bugzilla ID please list your name Anonymously.");
+					alert ("Your Bugzilla ID could not be verified." + '\n' + "For donations of $35 dollars or more we require you to provide a valid Bugzilla ID.  If you do not wish to provide your Bugzilla ID please list your name Anonymously.");
 					return false;	
 				}
 			}
