@@ -66,7 +66,8 @@ function validateForm() {
 		return false;
 	}
 	if (parseInt(a.value) >= 35) {
-		if (anon.value == "Public")	{
+		if (anon.checked == true)	{
+
 			if (b.value.length !=0)	{
 				if (v.innerHTML.length == 0) {
 					alert("Please verify your Bugzilla Login to continue");
@@ -81,6 +82,7 @@ function validateForm() {
 				alert("For donations of $35 dollars or more we require you to provide your Bugzilla ID.  If you do not wish to provide your Bugzilla ID please list your name Anonymously.");
 				return false;
 			}
+			
 		}
 	}
 	return retVal;
