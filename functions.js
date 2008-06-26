@@ -113,7 +113,7 @@ function verifyBugzillaLogin()
 	var v = document.getElementById('verify');
 	var a = document.getElementById('amount');
 	var bugzillaLogin = document.getElementById('bugzilla');
-	if (bugzillaLogin.value.length == 0 || a.value < 35)
+	if (bugzillaLogin.value.length == 0 || parseInt(a.value) < 35)
 	{
 		v.innerHTML = "";
 		v.removeAttribute("class");
