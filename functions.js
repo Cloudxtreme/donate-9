@@ -38,6 +38,7 @@ function validateForm() {
 	var a = document.getElementById("amount");
 	var b = document.getElementById("bugzilla");
 	var v = document.getElementById("verify");
+	var anon = document.getElementById("os1");
  
  	if (fn.value.length == 0)
  	{
@@ -66,15 +67,18 @@ function validateForm() {
 	}
 	if (a.value >=35 && b.value.length !=0)
 	{
-		if (v.innerHTML.length == 0)
+		if (anon.value == "Public")
 		{
-			alert("Please verify your bugzilla login to continue");
-			return false;
-		}
-		if (v.innerHTML != "Verified!")
-		{
-			alert ("Your Bugzilla Login is not correct.");
-			return false;	
+			if (v.innerHTML.length == 0)
+			{
+				alert("Please verify your bugzilla login to continue");
+				return false;
+			}
+			if (v.innerHTML != "Verified!")
+			{
+				alert ("Your Bugzilla Login is not correct.");
+				return false;	
+			}
 		}
 	}
 	return retVal;
