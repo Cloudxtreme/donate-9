@@ -65,7 +65,7 @@ function validateForm() {
 		alert("Please specify an amount.");
 		return false;
 	}
-	if (a.value >= 35) {
+	if (parseInt(a.value) >= 35) {
 		if (b.value.length !=0)	{
 			if (anon.value == "Public")	{
 				if (v.innerHTML.length == 0) {
