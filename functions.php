@@ -43,14 +43,14 @@ function displayPager($_start, $_pageValue, $_pageCount)
 			<?
 				if ($_start >= $_pageValue)
 				{
-					?><a href="donorlist.php?start=<?=$_start-$_pageValue;?>"><< Previous Page</a><?
+					?><a href="<?=$SERVER['PHP_SELF'];?>?start=<?=$_start-$_pageValue;?>"><< Previous Page</a><?
 				}
 			?>&nbsp;</td>
 				<td align="right">
 			<?
 				if (($_start + $_pageValue) < $_pageCount)
 				{
-					?><a href="donorlist.php?start=<?=$_start+$_pageValue;?>">Next Page >></a><?
+					?><a href="<?=$SERVER['PHP_SELF'];?>?start=<?=$_start+$_pageValue;?>">Next Page >></a><?
 				}
 			?>
 				</td>
