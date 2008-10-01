@@ -108,7 +108,7 @@
 			<p align="center"><img src="images/friendslogo.jpg"></p>
 		</div>		
 		<div style="clear:both"><br/><br/>
-			<p>*Eclipse Foundation Inc. is a not-for-profit, member supported corporation. Please note that contributions or gifts to the Ecilpse Foundation Inc. are not tax deductible as charitable contributions. Contributions will not be restricted to the activities described, but will be put into a general operating fund.</p>
+			<p>*Eclipse Foundation Inc. is a not-for-profit, member supported corporation. Please note that contributions or gifts to the Eclipse Foundation Inc. are not tax deductible as charitable contributions. Contributions will not be restricted to the activities described, but will be put into a general operating fund.</p>
 			<p>**Eclipse Foundation Inc. cannot guarantee that the Friends mirror will be faster than its other mirrors, however it will give users of this mirror priority. This Friends Mirror is only available for downloads through our website.</p>
 			<p>***The Friends of Eclipse program is for individuals, so the logo should not be used on an organization web site.</p>
 		</div>
