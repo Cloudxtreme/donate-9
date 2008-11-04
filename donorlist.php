@@ -84,6 +84,7 @@
 							}
 						}
 					$date = $contribution->getDateExpired();
+					$date = strtotime($date);
 					$date = strtotime("-1 year", $date);
 					$date = date("Y-m-d h:i:s", $date);
 					//$date = $friend->getDateJoined();			
