@@ -83,7 +83,9 @@
 								$comment .= $value . " ";
 							}
 						}
-					$date = $friend->getDateJoined();			
+					$date = $contribution->getDateExpired();
+					$date = strtotime("-1 year", $date);
+					//$date = $friend->getDateJoined();			
 				?>
 				<tr class="donorRecord">
 					<td width="25"><?=$benefit;?></td>
