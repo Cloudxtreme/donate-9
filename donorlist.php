@@ -85,6 +85,7 @@
 						}
 					$date = $contribution->getDateExpired();
 					$date = strtotime("-1 year", $date);
+					$date = date("Y-m-d h:i:s");
 					//$date = $friend->getDateJoined();			
 				?>
 				<tr class="donorRecord">
