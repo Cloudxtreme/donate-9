@@ -17,12 +17,6 @@
 	$header .= "Content-Length: " . strlen($req) . "\r\n\r\n";
 	$fp = fsockopen ('www.paypal.com', 80, $errno, $errstr, 30);
 	
-	
-	$fn = "Nathan";
-	$ln = "Gervais";
-	$am = "40";
-	$bugz = "8987";
-	
 	if (!$fp) {
 	// HTTP ERROR
 	} else {
