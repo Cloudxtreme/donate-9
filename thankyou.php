@@ -124,6 +124,7 @@
 						$newFriend->setBugzillaID($bugzillaID);
 						$newFriend->setIsAnonymous($anonymousValue);
 						$newFriend->setIsBenefit($benefit);	
+						$newFriend->setFriendID($friendID);
 						$newFriendID = $newFriend->insertUpdateFriend();
 						
 						// FriendID does not equal 0 so we have an existing user. We need to add a new contribution
