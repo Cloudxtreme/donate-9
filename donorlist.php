@@ -86,8 +86,11 @@
 					$date = $contribution->getDateExpired();
 					$date = strtotime($date);
 					$date = strtotime("-1 year", $date);
+					$now = strtotime("now");
+					if ($date <= $now) {
 					$date = date("Y-m-d H:i:s", $date);
-					//$date = $friend->getDateJoined();			
+					//$date = $friend->getDateJoined();		
+						
 				?>
 				<tr class="donorRecord">
 					<td width="25"><?=$benefit;?></td>
@@ -95,7 +98,7 @@
 					<td><?=$date;?></td>
 					<td align="right">$<?=$amount;?> USD</td>
 				</tr>		
-				<?}	?>
+				<?}	}?>
 		</table>
 		<?=displayPager($start, $pageValue, $pageCount);?>
 		<br/><br/>				
