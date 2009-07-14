@@ -17,18 +17,24 @@ function sideDonorList($_numrows) {
 		$fcObject = $friendsContributionsList->getItemAt($i);
 		$friend = $fcObject->getFriendObject();
 		$contribution = $fcObject->getContributionObject();
-		$anonymous = $friend->getIsAnonymous();
-		if ($anonymous != 1)
-			$name = $friend->getFirstName() . " " . $friend->getLastName();
-		else 
-			$name = "Anonymous";
-		$benefit = $friend->getIsBenefit();
-		if ($benefit)
-			$style = "style=\"list-style-image:url(images/starbullet.jpg);\"";
-		else 
-			$style = "";
-		$amount = $contribution->getAmount();
-		echo "<li $style>$name - $" . $amount . "</li>";
+		$date = $contribution->getDateExpired();
+		$date = strtotime($date);
+		$date = strtotime("-1 year", $date);
+		$now = strtotime("now");
+		if ($date <= $now) {
+			$anonymous = $friend->getIsAnonymous();
+			if ($anonymous != 1)
+				$name = $friend->getFirstName() . " " . $friend->getLastName();
+			else 
+				$name = "Anonymous";
+			$benefit = $friend->getIsBenefit();
+			if ($benefit)
+				$style = "style=\"list-style-image:url(images/starbullet.jpg);\"";
+			else 
+				$style = "";
+			$amount = $contribution->getAmount();
+			echo "<li $style>$name - $" . $amount . "</li>";
+		}
 	}
 	echo "<div class=\"more\"><a href=\"donorlist.php\">Donor List</a></div>";
 }
