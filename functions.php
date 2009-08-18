@@ -39,24 +39,26 @@ function sideDonorList($_numrows) {
 	echo "<div class=\"more\"><a href=\"donorlist.php\">Donor List</a></div>";
 }
 
-function displayPager($_start, $_pageValue, $_pageCount)
+function displayPager($_start, $_pageValue, $_pageCount, $_showAll = NULL)
 {
+	if ($_showAll != NULL)
+	{$showAll = "&showAll=1";}
 	ob_start();
 	?>
 	<table class="pager">
 			<tr>
-				<td align="left">
+				<td style="text-align:right">
 			<?
 				if ($_start >= $_pageValue)
 				{
-					?><a href="<?=$SERVER['PHP_SELF'];?>?start=<?=$_start-$_pageValue;?>"><< Previous Page</a><?
+					?><a href="<?=$SERVER['PHP_SELF'];?>?start=<?=$_start-$_pageValue;?><?=$showAll;?>"><< Previous Page</a><?
 				}
 			?>&nbsp;</td>
-				<td align="right">
+				<td style="text-align:right">
 			<?
 				if (($_start + $_pageValue) < $_pageCount)
 				{
-					?><a href="<?=$SERVER['PHP_SELF'];?>?start=<?=$_start+$_pageValue;?>">Next Page >></a><?
+					?><a href="<?=$SERVER['PHP_SELF'];?>?start=<?=$_start+$_pageValue;?><?=$showAll;?>">Next Page >></a><?
 				}
 			?>
 				</td>

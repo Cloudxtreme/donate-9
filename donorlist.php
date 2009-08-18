@@ -24,19 +24,31 @@
 	ob_start();	
 	$showAll = 0;
 	$showAll = $_GET['showAll'];
+	if ($showAll == 0)
+	{ 
+		$where = 'WHERE F.is_benefit = 1';
+	}
+	else {
+		$where = NULL;
+	}
 	$start = $_GET['start'];
 	$pageValue = 25;
 	if (!$start)
 		$start = 0;
 	$totalContributionCount = new FriendsContributionsList();
-	$totalContributionCount->selectFriendsContributionsList();
+	$totalContributionCount->selectFriendsContributionsList(-1, -1, 'WHERE F.is_benefit = 1');
 	$pageCount = $totalContributionCount->getCount();
 	$totalContributionCount = NULL;		
 	?>
 	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 	<div id="midcolumn">
 		<h1><?=$pageTitle;?></h1>
-		<?=displayPager($start, $pageValue, $pageCount);?>
+		<? if (!$showAll){ ?>
+		<a href="<?=$SERVER['PHP_SELF'];?>?showAll=1">Show All</a>
+		<? } else { ?>
+		<a href="donorlist.php">Show Friends Only</a>
+		<? } ?>
+		<?=displayPager($start, $pageValue, $pageCount, $showAll);?>
 		<table class="donorList" cellspacing=0>
 			<tr class="donorHeader">
 				<td colspan="2" width="60%">Name and Message</td>
@@ -48,7 +60,7 @@
 
 				
 				$friendsContributionsList = new FriendsContributionsList();
-				$friendsContributionsList->selectFriendsContributionsList($start, $pageValue);
+				$friendsContributionsList->selectFriendsContributionsList($start, $pageValue, $where);
 				
 				$friend = new Friend();
 				$contribution = new Contribution();
@@ -74,7 +86,7 @@
 					{
 						$amount = $amount . ".00";
 					}
-					$comment = strip_tags($contribution->getMessage());	
+					$comment =  stripslashes(strip_tags($contribution->getMessage()));	
 					if (strlen($comment) > 80)
 						if (strpos($comment, ' ') == 0 )
 						{
@@ -90,9 +102,9 @@
 					$date = strtotime("-1 year", $date);
 					$now = strtotime("now");
 					if ($date <= $now) {
-					$date = date("Y-m-d H:i:s", $date);
+					$date = date("Y-m-d", $date);
 					//$date = $friend->getDateJoined();		
-					if ($showAll == 1 || ($showAll == 0 && $benefit == 1)) {						
+					if ($showAll == 1 || $benefit != "") {						
 				?>
 				<tr class="donorRecord">
 					<td width="25"><?=$benefit;?></td>
@@ -102,25 +114,16 @@
 				</tr>		
 				<?} } }?>
 		</table>
-		<?=displayPager($start, $pageValue, $pageCount);?>
+		<?=displayPager($start, $pageValue, $pageCount, $showAll);?>
 		<br/><br/>				
 	</div>
 	<div id="rightcolumn">
-		<div align="middle"><br/><br/>
-			<a href="/donate/"><img src="/donate/images/donate.jpg" alt="Donate to Eclipse"/></a>
+		<div style="text-align:center">
+			<a href="/donate/"><img src="/donate/images/donate.jpg" alt="Donate to Eclipse"/></a><br/><br/>
 		</div>
 		<div class="sideitem">
-			<h6>Donations Receieved</h6>
-			<div align="center" style="font-size:24px;"><?=$pageCount;?></div>
-		</div>
-		<div class="sideitem">
-		
-		<h6>Related Links</h6>
-			<ul>
-				<li><a href="index.php">Donate to Eclipse</a></li>
-				<li><a href="http://dev.eclipse.org/site_login">Friends of Eclipse Login</a></li>
-				<li><a href="faq.php">Donation FAQ</a></li>
-			</ul>
+			<h6>Friends of Eclipse</h6>
+			<div style="text-align:center;font-size:24px;padding:5px 0px;"><?=$pageCount;?></div>
 		</div>
 		<div class="sideitem">
 		<h6>Legend</h6>
@@ -131,7 +134,10 @@
 	</div>	
 	<?
 	$html = ob_get_clean();
+	$Nav->addCustomNav("Donate to Eclipse", 		"index.php", 			"_self", 1);
+	$Nav->addCustomNav("Friends of Eclipse Login", 		"http://dev.eclipse.org/site_login", 			"_self", 1);
+	$Nav->addCustomNav("Donation FAQ", 		"faq.php", 			"_self", 1);
 	# Generate the web page
-	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
+	$App->generatePage("Nova", $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
 	
