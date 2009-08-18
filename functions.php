@@ -47,7 +47,7 @@ function displayPager($_start, $_pageValue, $_pageCount, $_showAll = NULL)
 	?>
 	<table class="pager">
 			<tr>
-				<td style="text-align:right">
+				<td style="text-align:left">
 			<?
 				if ($_start >= $_pageValue)
 				{
