@@ -22,6 +22,7 @@
 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/classes/friends/friendsContributionsList.class.php");
 	require_once("functions.php");
 	ob_start();	
+	$showAll = 0;
 	$showAll = $_GET['showAll'];
 	$start = $_GET['start'];
 	$pageValue = 25;
