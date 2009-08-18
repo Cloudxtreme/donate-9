@@ -92,7 +92,7 @@
 					if ($date <= $now) {
 					$date = date("Y-m-d H:i:s", $date);
 					//$date = $friend->getDateJoined();		
-					if ($showAll == 1 || ($showAll == 0 && $isBenefit == 1)) {						
+					if ($showAll == 1 || ($showAll == 0 && $benefit == 1)) {						
 				?>
 				<tr class="donorRecord">
 					<td width="25"><?=$benefit;?></td>
