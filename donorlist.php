@@ -22,6 +22,7 @@
 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/classes/friends/friendsContributionsList.class.php");
 	require_once("functions.php");
 	ob_start();	
+	$showAll = $_GET['showAll'];
 	$start = $_GET['start'];
 	$pageValue = 25;
 	if (!$start)
@@ -90,7 +91,7 @@
 					if ($date <= $now) {
 					$date = date("Y-m-d H:i:s", $date);
 					//$date = $friend->getDateJoined();		
-						
+					if ($showAll == 1 || ($showAll == 0 && $isBenefit == 1)) {						
 				?>
 				<tr class="donorRecord">
 					<td width="25"><?=$benefit;?></td>
@@ -98,7 +99,7 @@
 					<td><?=$date;?></td>
 					<td align="right">$<?=$amount;?> USD</td>
 				</tr>		
-				<?}	}?>
+				<?} } }?>
 		</table>
 		<?=displayPager($start, $pageValue, $pageCount);?>
 		<br/><br/>				
