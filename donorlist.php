@@ -22,13 +22,18 @@
 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/classes/friends/friendsContributionsList.class.php");
 	require_once("functions.php");
 	ob_start();	
-	$showAll = 0;
+	
 	$showAll = $_GET['showAll'];
+	if ($showAll == NULL) {
+		$showAll = 1;
+	}
 	if ($showAll == 0)
 	{ 
+		$showAll = 0;
 		$where = 'WHERE F.is_benefit = 1';
 	}
 	else {
+		$showAll = 1;
 		$where = NULL;
 	}
 	$start = $_GET['start'];
@@ -46,7 +51,7 @@
 		<? if (!$showAll){ ?>
 		<a href="<?=$SERVER['PHP_SELF'];?>?showAll=1">Show All</a>
 		<? } else { ?>
-		<a href="donorlist.php">Show Friends Only</a>
+		<a href="donorlist.php?showAll=0">Show Friends Only</a>
 		<? } ?>
 		<?=displayPager($start, $pageValue, $pageCount, $showAll);?>
 		<table class="donorList" cellspacing=0>

@@ -41,8 +41,8 @@ function sideDonorList($_numrows) {
 
 function displayPager($_start, $_pageValue, $_pageCount, $_showAll = NULL)
 {
-	if ($_showAll != NULL)
-	{$showAll = "&showAll=1";}
+	if ($_showAll == 0)
+	{$showAll = "&showAll=0";}
 	ob_start();
 	?>
 	<table class="pager">
