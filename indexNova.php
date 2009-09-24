@@ -134,6 +134,6 @@
 	<?
 	$html = ob_get_clean();
 	# Generate the web page
-	$App->generatePage("nova", $Menu, NULL, $pageAuthor, $pageKeywords, $pageTitle, $html);
+	$App->generatePage("Nova", $Menu, NULL, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
 	
