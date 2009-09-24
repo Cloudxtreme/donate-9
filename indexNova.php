@@ -41,7 +41,7 @@
 			Please note, the Eclipse Foundation is a not-for-profit organization, not a charitable organization, so we are unable to provide charitable tax receipts.</p>  
 		</div>
 		<div class="homeitem">
-		<h3>Join Now</h3>
+		<h3>Donate</h3>
 				<form ACTION="https://www.paypal.com/cgi-bin/webscr" METHOD="POST" name="donateForm">
 				<input type="hidden" name="business" value="lynn@eclipse.org">  
 				<input type="hidden" name="item_name" value="Donation">
