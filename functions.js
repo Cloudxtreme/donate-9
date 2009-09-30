@@ -50,9 +50,9 @@ function validateForm() {
 		alert("Please specify a last name.");
 		return false;
 	}
-	if (a.value <= 0)
+	if (a.value < 2)
 	{
-		alert("Amount must be greater then 0.");
+		alert("Amount must be greater then $2.");
 		return false;
 	}
 	if (isNumeric(a.value) == false)
