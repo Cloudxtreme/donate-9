@@ -138,6 +138,7 @@
 		</div>
 	</div>	
 	<?
+	header('Content-Type: text/html; charset=utf-8');
 	$html = ob_get_clean();
 	$html = mb_convert_encoding($html, "HTML-ENTITIES", "auto");
 	$Nav->addCustomNav("Donate to Eclipse", 		"index.php", 			"_self", 1);
