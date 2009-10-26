@@ -138,9 +138,9 @@
 		</div>
 	</div>	
 	<?
-	header('Content-Type: text/html; charset=utf-8');
+	header('Content-Type: text/html; charset=ISO-8859-1;');
 	$html = ob_get_clean();
-	$html = mb_convert_encoding($html, "HTML-ENTITIES", "auto");
+//	$html = mb_convert_encoding($html, "HTML-ENTITIES", "UTF-8");
 	$Nav->addCustomNav("Donate to Eclipse", 		"index.php", 			"_self", 1);
 	$Nav->addCustomNav("Friends of Eclipse Login", 		"http://dev.eclipse.org/site_login", 			"_self", 1);
 	$Nav->addCustomNav("Donation FAQ", 		"faq.php", 			"_self", 1);
