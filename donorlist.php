@@ -127,7 +127,7 @@
 			<a href="/donate/"><img src="/donate/images/donate.jpg" alt="Donate to Eclipse"/></a><br/><br/>
 		</div>
 		<div class="sideitem">
-			<h6>Friends of Eclipse</h6>
+			<h6>Total Donations</h6>
 			<div style="text-align:center;font-size:24px;padding:5px 0px;"><?=$pageCount;?></div>
 		</div>
 		<div class="sideitem">
