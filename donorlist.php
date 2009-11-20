@@ -41,7 +41,7 @@
 	if (!$start)
 		$start = 0;
 	$totalContributionCount = new FriendsContributionsList();
-	$totalContributionCount->selectFriendsContributionsList(-1, -1, 'WHERE F.is_benefit = 1');
+	$totalContributionCount->selectFriendsContributionsList(-1, -1 /*, 'WHERE F.is_benefit = 1'*/);
 	$pageCount = $totalContributionCount->getCount();
 	$totalContributionCount = NULL;		
 	?>
