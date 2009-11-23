@@ -14,7 +14,7 @@
 	
 	#
 	# Begin: page-specific settings.  Change these. 
-	$pageTitle 		= "Friends of Eclipse";
+	$pageTitle 		= "Support Eclipse";
 	$pageKeywords	= "friends of eclipse, donation, contribution";
 	$pageAuthor		= "Nathan Gervais";
 	include ("functions.php");		
@@ -22,13 +22,14 @@
 	?>
 	<script type="text/javascript" src="functions.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-	<div id="midcolumn">
+	<div id="fullcolumn">
+		<div id="midcolumn">
 		<h1><?=$pageTitle ?></h1>
 		
 		<div >
 			<!-- <p>Financially contribute to the Eclipse Foundation and help support the vibrant Eclipse ecosystem and open source community.</p> -->
 
-			<p><a href="./faq.php">Become a Friend of Eclipse</a> and help the Eclipse Foundation provide services for the Eclipse community, such as*: 
+			<p>Support Eclipse and help the Eclipse Foundation provide services for the Eclipse community, such as*: 
 				<ul class="paddedList">
 					<li>Providing more bandwidth for users and committers</li> 
 					<li>Purchasing additional servers to host Eclipse projects</li> 
@@ -36,11 +37,11 @@
 					<li>Sponsoring Eclipse community events</li>
 				</ul>
 			</p>
-			<p>Feel free to donate any amount you like.  Donations of $35 or more will receive special Friends of Eclipse benefits.  We have made it easy to use a credit card through <img src="images/paypal.gif" align="absbottom" alt="PayPal">.
+			<p>Feel free to donate any amount you'd like.  Donations of $35 or more will receive special Friends of Eclipse benefits (described below).  We have made it easy to use a credit card through <img src="images/paypal.gif" align="absbottom" alt="PayPal">.
 			Please note, the Eclipse Foundation is a not-for-profit organization, not a charitable organization, so we are unable to provide charitable tax receipts.</p>  
 		</div>
 		<div class="homeitem">
-		<h3>Join Now</h3>
+		<h3>Donate</h3>
 				<form ACTION="https://www.paypal.com/cgi-bin/webscr" METHOD="POST" name="donateForm">
 				<input type="hidden" name="business" value="lynn@eclipse.org">  
 				<input type="hidden" name="item_name" value="Donation">
@@ -97,16 +98,16 @@
 				</form>
 		</div>	
 		<div class="homeitem">
-			<h3>Become a Friend of Eclipse</h3>
+			<h3>Friend of Eclipse Benefits</h3>
 
-			<p>Donate US$35 or more and you will be identified as a Friend of Eclipse for 1 year. Benefits of Friends Include:
+			<p>Donate US$35 or more and you will be identified as a Friend of Eclipse for 1 year. Benefits include:
 				<ul class="paddedList">
 					<li><span class="friend">Friends of Eclipse Mirror Site</span>  - This will allow you to download new versions of Eclipse faster**.</li>
 					<li><span class="friend">"Friend of Eclipse" logo***</span> </li>
 				</ul>
 			</p>
 			<p align="center"><img src="images/friendslogo.jpg"></p>
-		</div>		
+		</div>
 		<div style="clear:both"><br/><br/>
 			<p>*Eclipse Foundation Inc. is a not-for-profit, member supported corporation. Please note that contributions or gifts to the Eclipse Foundation Inc. are not tax deductible as charitable contributions. Contributions will not be restricted to the activities described, but will be put into a general operating fund.</p>
 			<p>**Eclipse Foundation Inc. cannot guarantee that the Friends mirror will be faster than its other mirrors, however it will give users of this mirror priority. This Friends Mirror is only available for downloads through our website.</p>
@@ -126,12 +127,15 @@
 			<ul>
 				<? sideDonorList(10); ?>
 			</ul>
+			<p style="font-size:10px;color:#BBB;">*Amounts are in USD</p>
+			
 		</div>
 			
 	</div> 
+	</div>
 	<?
 	$html = ob_get_clean();
 	# Generate the web page
-	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
+	$App->generatePage("Nova", $Menu, NULL, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
 	
