@@ -23,8 +23,10 @@ function sideDonorList($_numrows) {
 		$now = strtotime("now");
 		if ($date <= $now) {
 			$anonymous = $friend->getIsAnonymous();
-			if ($anonymous != 1)
+			if ($anonymous != 1) {
 				$name = $friend->getFirstName() . " " . $friend->getLastName();
+				$name = htmlentities($name);
+			}
 			else 
 				$name = "Anonymous";
 			$benefit = $friend->getIsBenefit();
