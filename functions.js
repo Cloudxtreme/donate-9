@@ -120,7 +120,8 @@ function verifyBugzillaLogin()
 		bugzillaLogin.value = "";
 		bugzillaLogin.removeAttribute("style");
 	}
-	var url = "ajaxBugzilla.php?bugzillaLogin=" + bugzillaLogin.value;
+	
+	var url = "ajaxBugzilla.php?bugzillaLogin=" + bugzillaLogin.value.replace('+', '%2B');
 	ajaxObject.open("GET", url, true);
 	ajaxObject.onreadystatechange = updatePage;
 	ajaxObject.send(null);
