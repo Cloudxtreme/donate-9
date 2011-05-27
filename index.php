@@ -121,7 +121,7 @@
 				<li><a href="faq.php">FAQ</a></li>
 				<li><a href="http://dev.eclipse.org/site_login">Friends of Eclipse Login</a></li>				
 			</ul>
-			<?php $App->getFacebookLikeButtonHTML() ?>
+			<?php echo $App->getFacebookLikeButtonHTML() ?>
 		</div>	
 		<div class="sideitem">
 			<h6>Recent Donations</h6>
