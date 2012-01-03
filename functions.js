@@ -70,16 +70,16 @@ function validateForm() {
 
 			if (b.value.length !=0)	{
 				if (v.innerHTML.length == 0) {
-					alert("Please verify your Bugzilla Login to continue");
+					alert("Please verify your Eclipse.org login to continue");
 					return false;
 				}
 				if (v.innerHTML != "Verified!") {
-					alert ("Your Bugzilla ID could not be verified." + '\n' + "For donations of $35 dollars or more we require you to provide a valid Bugzilla ID.  If you do not wish to provide your Bugzilla ID please list your name Anonymously.");
+					alert ("Your Eclipse.org ID could not be verified." + '\n' + "For donations of $35 dollars or more we require you to provide a valid ID.  If you do not wish to provide your Eclipse.org ID please list your name Anonymously.");
 					return false;	
 				}
 			}
 			else {
-				alert("For donations of $35 dollars or more we require you to provide your Bugzilla ID.  If you do not wish to provide your Bugzilla ID please list your name Anonymously.");
+				alert("For donations of $35 dollars or more we require you to provide your Eclipse.org account ID.  If you do not wish to provide it, please list your name Anonymously.");
 				return false;
 			}
 			

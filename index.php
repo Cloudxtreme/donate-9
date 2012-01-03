@@ -78,12 +78,12 @@
 						<tr>
 							<td colspan=2>
 								<div id="WhatsThis">
-									When you donate US$35 or more you will have access to the Friends of Eclipse Mirror Site. You will need a Bugzilla Login to gain you access to this mirror. If you need a Bugzilla ID <a href="https://bugs.eclipse.org/bugs/createaccount.cgi" target="_blank">click here</a> to launch the registration page in new window. 
+									When you donate US$35 or more you will have access to the Friends of Eclipse Mirror Site. You will need an Eclipse.org account to gain you access to this mirror. If you need an account <a href="https://dev.eclipse.org/site_login/createaccount.php" target="_blank">click here</a> to launch the registration page in a new window. 
 								</div>
 							</td>
 						</tr>
 						<tr>
-							<td>Bugzilla Login: <div id="verify"></div></td>
+							<td>Eclipse.org login: <div id="verify"></div></td>
 							<td><input class="disabled" type="text" name="item_number" id="bugzilla" size="30" disabled></td>
 						</tr>
 						<tr>
