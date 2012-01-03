@@ -67,7 +67,7 @@
 				<li><b>How do I get access to the Friends of Eclipse mirror?</b><br/><br/>
 				Everyone that donates US$35 or more to the Eclipse Foundation will automatically be flagged as a 
 				Friend of Eclipse.  This gives them access to the Friends of Eclipse Mirror for 12 months.   
-				When you register your donation, you will be asked to enter your Bugzilla Login ID.  This will be used 
+				When you register your donation, you will be asked to enter your Eclipse.org Login ID.  This will be used 
 				to login to the Friends of Eclipse Mirror.<br/><br/></li>
 				
 				<li><b>Who can use the Friend of Eclipse Logo?</b><br/><br/>
