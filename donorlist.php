@@ -26,7 +26,7 @@ error_reporting(E_ALL);
 	require_once("functions.php");
 	ob_start();	
 	
-	$showAll = $_GET['showAll'];
+	$showAll = $App->getHTTPParameter('showAll');
 	if ($showAll == NULL) {
 		$showAll = 1;
 	}
@@ -39,7 +39,7 @@ error_reporting(E_ALL);
 		$showAll = 1;
 		$where = NULL;
 	}
-	$start = $_GET['start'];
+	$start = $App->getHTTPParameter('start');
 	$pageValue = 25;
 	if (!$start)
 		$start = 0;
