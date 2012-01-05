@@ -103,12 +103,15 @@
 						}
 					$date = $contribution->getDateExpired();
 					$date = strtotime($date);
-					$date = strtotime("-13 month", $date);
+					$date = strtotime("-1 year", $date);
 					$now = strtotime("now");
+					if ($date >= $now) {
+						$date = strtotime("-13 month", $date);
+					}
 					if ($date <= $now) {
-					$date = date("Y-m-d", $date);
-					//$date = $friend->getDateJoined();		
-					if ($showAll == 1 || $benefit != "") {						
+						$date = date("Y-m-d", $date);
+						//$date = $friend->getDateJoined();		
+						if ($showAll == 1 || $benefit != "") {						
 				?>
 				<tr class="donorRecord">
 					<td width="25"><?=$benefit;?></td>
@@ -116,7 +119,9 @@
 					<td><?=$date;?></td>
 					<td align="right">$<?=$amount;?> USD</td>
 				</tr>		
-				<?} } }?>
+				<?		} 
+					} 
+				}?>
 		</table>
 		<?=displayPager($start, $pageValue, $pageCount, $showAll);?>
 		<br/><br/>				
