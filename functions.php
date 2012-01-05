@@ -53,14 +53,14 @@ function displayPager($_start, $_pageValue, $_pageCount, $_showAll = NULL)
 			<?
 				if ($_start >= $_pageValue)
 				{
-					?><a href="<?=$SERVER['PHP_SELF'];?>?start=<?=$_start-$_pageValue;?><?=$showAll;?>"><< Previous Page</a><?
+					?><a href="<?=$_SERVER['PHP_SELF'];?>?start=<?=$_start-$_pageValue;?><?=$showAll;?>"><< Previous Page</a><?
 				}
 			?>&nbsp;</td>
 				<td style="text-align:right">
 			<?
 				if (($_start + $_pageValue) < $_pageCount)
 				{
-					?><a href="<?=$SERVER['PHP_SELF'];?>?start=<?=$_start+$_pageValue;?><?=$showAll;?>">Next Page >></a><?
+					?><a href="<?=$_SERVER['PHP_SELF'];?>?start=<?=$_start+$_pageValue;?><?=$showAll;?>">Next Page >></a><?
 				}
 			?>
 				</td>
