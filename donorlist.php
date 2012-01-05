@@ -103,9 +103,6 @@
 						}
 					$date = strtotime("-1 year", strtotime($contribution->getDateExpired()));
 					$now = strtotime("now");
-					if ($date > $now) {
-						$date = strtotime("-13 month", strtotime($contribution->getDateExpired()));
-					}
 					if ($date <= $now) {
 						$date = date("Y-m-d", $date);
 						//$date = $friend->getDateJoined();		
