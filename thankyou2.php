@@ -23,7 +23,7 @@
 	 //require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/classes/friends/contribution.class.php");
 	 require_once("test/friends/friend.class.php");
 	 require_once("test/friends/contribution.class.php");
-	 require_once("/home/data/httpd/eclipse-php-classes/system/authcode.php");
+	 #require_once("/home/data/httpd/eclipse-php-classes/system/authcode.php");
 	 
 	ob_start();	
 	// read the post from PayPal system and add 'cmd'
