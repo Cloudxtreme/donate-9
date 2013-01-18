@@ -41,7 +41,7 @@
 	$header .= "POST /cgi-bin/webscr HTTP/1.0\r\n";
 	$header .= "Content-Type: application/x-www-form-urlencoded\r\n";
 	$header .= "Content-Length: " . strlen($req) . "\r\n\r\n";
-	$fp = fsockopen ('http://www.paypal.com/cgi-bin/webscr', 80, $errno, $errstr, 30);
+	$fp = fsockopen ('www.paypal.com', 80, $errno, $errstr, 30);
 	// If possible, securely post back to paypal using HTTPS
 	// Your PHP server will need to be SSL enabled
 	// $fp = fsockopen ('ssl://www.paypal.com', 443, $errno, $errstr, 30);
@@ -326,6 +326,6 @@
 	
 <? $html = ob_get_clean();
 	# Generate the web page
-	$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
+	$App->generatePage('Nova', $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
 
