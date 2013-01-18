@@ -29,11 +29,11 @@
 	// read the post from PayPal system and add 'cmd'
 	$req = 'cmd=_notify-synch';
 	
-
+	//remove when not using sandbox
+	$auth_token = '';
 	
 	
 	$tx_token = $_GET['tx'];
-	
 	//$req .= "&tx=$tx_token&at=$auth_token";
 	$req .= "&tx=$tx_token&at=V8qE_sev7DTOjOHjTv9JdDUBy2wocTb6W96-h2CuQJO9kx_FKHz00gFq1ri";
 	
@@ -41,13 +41,14 @@
 	$header .= "POST /cgi-bin/webscr HTTP/1.0\r\n";
 	$header .= "Content-Type: application/x-www-form-urlencoded\r\n";
 	$header .= "Content-Length: " . strlen($req) . "\r\n\r\n";
-	$fp = fsockopen ('http://www.sandbox.paypal.com/cgi-bin/webscr', 80, $errno, $errstr, 30);
+	$fp =  fsockopen ('ssl://www.sandbox.paypal.com', 443, $errno, $errstr, 30);
 	// If possible, securely post back to paypal using HTTPS
 	// Your PHP server will need to be SSL enabled
 	// $fp = fsockopen ('ssl://www.paypal.com', 443, $errno, $errstr, 30);
 	
 	if (!$fp) {
 		echo "FsockOpen seems to have failed. <br/>";
+		echo $errno;
 	} 
 	else {
 		fputs ($fp, $header . $req);
